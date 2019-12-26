@@ -1,11 +1,20 @@
-<!DOCTYPE html>
+<?php
+// Initialize the session
+session_start();
+ 
+// Check if the user is logged in, if not then redirect him to login page
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+    header("location: ../prihlasenie.php");
+    exit;
+}
+?>
+!DOCTYPE html>
 <html lang="sk">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="../../style.css?v=12">
   <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/90e4bc8c6b.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css"
@@ -24,43 +33,61 @@
     <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="index.html">Domov</a>
+          <a class="nav-link" href="../../index.html">Domov</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="src/rozvrh.html">Rozvrh</a>
+          <a class="nav-link" href="../src/rozvrh.html">Rozvrh</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="src/aktivity.html">Aktivity</a>
+          <a class="nav-link" href="../src/aktivity.html">Aktivity</a>
         </li>
         <li class="nav-item" id="fero">
-          <a class="nav-link" href="src/dospely.html">Pre dospelých</a>
+          <a class="nav-link" href="../src/dospely.html">Pre dospelých</a>
         </li>
         <li class="nav-item" id="fero">
-          <a class="nav-link" href="src/hala_miestnosti.html">Hala a miestnosti</a>
+          <a class="nav-link" href="../src/hala_miestnosti.html">Hala a miestnosti</a>
         </li>
         <li class="nav-item" id="fero">
-          <a class="nav-link" href="src/oslavy.html">Oslavy</a>
+          <a class="nav-link" href="../src/oslavy.html">Oslavy</a>
         </li>
         <li class="nav-item" id="fero">
-          <a class="nav-link" href="src/kontakt.html">Kontakt</a>
+          <a class="nav-link" href="../src/kontakt.html">Kontakt</a>
         </li>
         <li class="nav-item" id="fero">
-          <a class="nav-link" href="src/prihlasenie.php"><i class="far fa-user"
+          <a class="nav-link" href="../src/prihlasenie.php"><i class="far fa-user"
             style="color: #1f2f8b;"></i></a>
         </li>
       </ul>
     </div>
-  </nav><br><br><br><br><br><br><br><br><br>
+  </nav><br><br><br><br><br><br><br>
 
-  <div>
-      <a href="profile.php?id=default">Profil</a>
-      <a href="profile.php?id=historia">Historia</a>
-      <a href="profile.php?id=novinky">Novinky</a>
-      <a href="profile.php?id=kredit">Kredit</a>
-      <a href="profile.php?id=logout">Odhlasenie</a>
-  </div>
-
-    <div id="jozo">
+  <h2 class="heading2">ZÁKAZNÍCKA ZÓNA <br>Prihlaseny uzivatel : <?php echo htmlspecialchars($_SESSION["username"]); ?></h2>
+  <div class="container-fluid" id="first">
+    <div class="row">
+      <div class="col-lg-4 mw-100">
+          <nav id="sidebar">
+              <div>
+                  <ul class="list-unstyled components mb-1" id="ulek">
+                      <li class="sub_menu">
+                        <i class="far fa-user-circle"></i><a href="profile.php?id=default" class="sub">Profil</a>
+                      </li>
+                      <li class="sub_menu">
+                        <i class="fas fa-history"></i><a href="profile.php?id=historia" class="sub">Historia</a>
+                      </li>
+                      <li class="sub_menu">
+                        <i class="far fa-newspaper"></i><a href="profile.php?id=novinky" class="sub">Novinky</a>
+                      </li>
+                      <li class="sub_menu">
+                       <i class="fas fa-credit-card"></i><a href="profile.php?id=kredit" class="sub">Kredit</a>
+                      </li>
+                      <li class="sub_menu">
+                        <i class="fas fa-power-off"></i><a href="profile.php?id=logout" class="sub">Odhlasenie</a>
+                      </li>
+                  </ul>
+              </div>
+          </nav>
+      </div>
+      <div class="col-lg-8 mw-100 second">
         <?php 
             //dynamicke nahravanie podstranok
             switch($_GET['id']) {
@@ -85,12 +112,9 @@
                 break;
             }
         ?>
+      </div>
     </div>
-
-
-
-
-
+  </div><br><br><br>
 
 
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
