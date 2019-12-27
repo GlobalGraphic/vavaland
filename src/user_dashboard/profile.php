@@ -14,7 +14,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="../../style.css?v=12">
+  <link rel="stylesheet" href="../../style.css?v=1">
   <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/90e4bc8c6b.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css"

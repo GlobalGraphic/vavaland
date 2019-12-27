@@ -224,6 +224,16 @@ div.col-lg-4 {
     background-clip: padding-box;
 }
 
+div.col-lg-5 {
+    padding: 35px;
+    background-color: #64CC27;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    margin: 15px;
+    color: #fff;
+    font-size: 20px;
+}
+
 div.col-lg-8 {
     background-color: white;
     padding: 35px;

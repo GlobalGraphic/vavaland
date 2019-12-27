@@ -40,6 +40,7 @@ while ($row = mysqli_fetch_array($result,MYSQLI_ASSOC)) {
     <p class="infor"><b>Tel.číslo:</b>  <?php echo $cislo;?></p>
     <p class="infor"><b>Adresa:</b> <?php echo $adresa;?></p>
     <p class="text-danger">* Pre zmenu kontaktných info. kontaktujte administrátora.</p>
+    <a href="reset_hesla.php">Zmena hesla</a>
 </div>
 
 <?php 
