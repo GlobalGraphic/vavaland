@@ -234,6 +234,26 @@ div.col-lg-5 {
     font-size: 20px;
 }
 
+p.p_hd {
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 40px;
+}
+
+ul#list {
+    margin-bottom: 40px;
+}
+
+h2.kurz1 {
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 25px;
+}
+
+h2.kurz_hd {
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 25px;
+    font-size: 25px;
+}
+
 div.col-lg-8 {
     background-color: white;
     padding: 35px;

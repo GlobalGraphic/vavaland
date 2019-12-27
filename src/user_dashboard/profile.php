@@ -36,25 +36,22 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
           <a class="nav-link" href="../../index.html">Domov</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="../src/rozvrh.html">Rozvrh</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="../src/aktivity.html">Aktivity</a>
+          <a class="nav-link" href="../../src/rozvrh.html">Rozvrh</a>
         </li>
         <li class="nav-item" id="fero">
-          <a class="nav-link" href="../src/dospely.html">Pre dospelých</a>
+          <a class="nav-link" href="../../src/dospely.html">Pre dospelých</a>
         </li>
         <li class="nav-item" id="fero">
-          <a class="nav-link" href="../src/hala_miestnosti.html">Hala a miestnosti</a>
+          <a class="nav-link" href="../../src/hala_miestnosti.html">Hala a miestnosti</a>
         </li>
         <li class="nav-item" id="fero">
-          <a class="nav-link" href="../src/oslavy.html">Oslavy</a>
+          <a class="nav-link" href="../../src/oslavy.html">Oslavy</a>
         </li>
         <li class="nav-item" id="fero">
-          <a class="nav-link" href="../src/kontakt.html">Kontakt</a>
+          <a class="nav-link" href="../../src/kontakt.html">Kontakt</a>
         </li>
         <li class="nav-item" id="fero">
-          <a class="nav-link" href="../src/prihlasenie.php"><i class="far fa-user"
+          <a class="nav-link" href="../../src/prihlasenie.php"><i class="far fa-user"
             style="color: #1f2f8b;"></i></a>
         </li>
       </ul>
