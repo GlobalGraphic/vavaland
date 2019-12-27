@@ -184,7 +184,10 @@ a.sub {
     margin-right: 20px;
 }
 
-
+p.infor {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+}
 
 a.sub:hover {
     text-decoration: none;
