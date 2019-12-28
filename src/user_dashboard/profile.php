@@ -8,7 +8,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     exit;
 }
 ?>
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="sk">
 <head>
   <meta charset="UTF-8">
@@ -69,6 +69,9 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                         <i class="far fa-user-circle"></i><a href="profile.php?id=default" class="sub">Profil</a>
                       </li>
                       <li class="sub_menu">
+                      <i class="far fa-calendar-alt"></i><a href="profile.php?id=rozvrh" class="sub">Rozvrh</a>
+                      </li>
+                      <li class="sub_menu">
                         <i class="fas fa-history"></i><a href="profile.php?id=historia" class="sub">Historia</a>
                       </li>
                       <li class="sub_menu">
@@ -94,6 +97,10 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
                 case "historia":
                 include "historia.php";
+                break;
+
+                case "rozvrh":
+                include "ukaz_rozvrh.html";
                 break;
 
                 case "novinky":
