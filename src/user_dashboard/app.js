@@ -111,7 +111,8 @@ window.addEventListener("load", async () => {
 								url: "update.php",
 								data: {
 									id: item.id,
-									value: item.number
+									value: item.number,
+									kurz: item.description
 								},
 								headers: {
 									"Content-Type": "application/json"

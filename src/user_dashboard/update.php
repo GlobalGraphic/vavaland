@@ -19,21 +19,31 @@ if($conn->connect_error) {
 // get json from request
 $_POST = json_decode(file_get_contents("php://input"), true);
 
+
+
+
 if (isset($_POST["value"])) {
 
-	$user = $_SESSION['id'];
-	echo $user;
+	$id = $_SESSION['id'];
+
+	$sql3 = "SELECT * FROM users WHERE id = '".$_SESSION['id']."' ";
+
+	$result=mysqli_query($conn,$sql3);
+
+	$row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+
+	$priezvisko = $row["priezvisko"]; 
 
 	//	 vlozenie udajov
 	$sql = "UPDATE schedules SET number = " . $_POST["value"] . " WHERE `id` = " . $_POST["id"];
 
 	// vlozi session meno(prihlasovacie meno) do db aby si vedelo ktory user je uz registrovany
-	$sql2 = "UPDATE schedules SET rezervovane = ". $_SESSION['id'] ." WHERE `id` = " . $_POST["id"];
+	$sql2 = "INSERT INTO rezervacie(user_id,user_surname, kurz) VALUES ('".$_SESSION['username']."','".$priezvisko."','".$_POST['kurz']."')";
 	//	kontrola ci sa udaje uspesne vlozili
 	if (mysqli_query($conn, $sql) && mysqli_query($conn, $sql2)) {
 		echo "Uspesne rezervovane!";
 	} else {
-		echo "ERROR" . $sql . " " . $sql2 . " " . mysqli_error($conn);
+		echo "ERROR" . $sql . " " . mysqli_error($conn);
 	}
 
 	$conn->close();

@@ -19,6 +19,7 @@ while ($row = mysqli_fetch_array($result,MYSQLI_ASSOC)) {
     $email = $row["email"];
     $cislo = $row["cislo"];
     $adresa = $row["adresa"];
+    
 ?>
 
 <div class="container">

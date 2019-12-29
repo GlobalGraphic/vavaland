@@ -72,9 +72,6 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                       <i class="far fa-calendar-alt"></i><a href="profile.php?id=rozvrh" class="sub">Rozvrh</a>
                       </li>
                       <li class="sub_menu">
-                        <i class="fas fa-history"></i><a href="profile.php?id=historia" class="sub">Historia</a>
-                      </li>
-                      <li class="sub_menu">
                         <i class="far fa-newspaper"></i><a href="profile.php?id=novinky" class="sub">Novinky</a>
                       </li>
                       <li class="sub_menu">
@@ -93,10 +90,6 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
             switch($_GET['id']) {
                 default:
                 require "profil.php";
-                break;
-
-                case "historia":
-                include "historia.php";
                 break;
 
                 case "rozvrh":
