@@ -48,7 +48,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
           <a class="nav-link" href="../../src/oslavy.html">Oslavy</a>
         </li>
         <li class="nav-item" id="fero">
-          <a class="nav-link" href="../../src/kontakt.html">Kontakt</a>
+          <a class="nav-link" href="../../src/kontakt.php">Kontakt</a>
         </li>
         <li class="nav-item" id="fero">
           <a class="nav-link" href="../../src/prihlasenie.php"><i class="far fa-user"

@@ -1,9 +1,46 @@
+<?php
+if (isset($_POST['btn'])) {
+  
+  $msg = "";
+/*include_once "phpmailer/PHPMailer.php";
+include_once "phpmailer/Exception.php";
+include_once "phpmailer/SMTP.php";*/
+
+    $meno = $_POST['meno'];
+    $email = $_POST['email'];
+    $predmet = $_POST['value'];
+    $msg= '<div class="jumbotron">'. $_POST['meno'] . '<br>' . $_POST['email'] .'<br>' . $_POST['sprava'].'</div>';
+
+    require('phpmailer/PHPMailerAutoload.php');
+  
+      $mail = new PHPMailer();
+      $mail->CharSet = "UTF-8";
+      $mail->addAddress('info@vavaland.sk');
+      $mail->setFrom($email);
+      $mail->Subject = $predmet;
+      $mail->isHTML(true);
+      $mail->Body = $msg;
+
+      if ($mail->send()) {
+          header("Location: email_gen_msg.html");
+      } else{
+         //$msg = "Vyskitla sa chyba, skúste to znova!";
+        echo 'nastala chyba';
+       }
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="vitajte v modernej športovo-vzdelávacej krajine ktorá sídli v mestskej časti Ružinov. Ponúkame obrovskú a fantastickú škálu športových a voľnočasových aktivít pre batoľatá, deti, mladých ľudí a rodiny. Ponúkame veľké množstvo aktivít vrátane cvičenia v telocvični pre deti a dospelých, narodeninových osláv, športových, umeleckých a hobby krúžkov, vzdelávacích aktivít alebo len tak príjemné posedenie pri kávičke.">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="športove kurzy, fyzio kurzy, doučovanie, jazykové kurzy, deti, Tvorivá zábava, športové Aktivity">
+    <meta name="author" content="Global Graphic & Design">
+    <link rel="icon" href="assets/logo.png" type="image/gif" sizes="16x16">
     <title>Kontakt</title>
     <link rel="stylesheet" href="../style.css">
   <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
@@ -47,7 +84,7 @@
     </div>
   </nav><br><br><br><br><br><br><br><br><br>
 
-<form id="contact_form" method="post" class="form-horizontal" action="#">
+<form id="contact_form" method="POST" class="form-horizontal" action="#">
 <div class="container">
     <div class="row">
         <div class="col-md-8">
@@ -96,15 +133,13 @@
             <address>
                 <strong>VAVAland s.r.o.<br>
                 </strong><br>
-                Janko Hrasko<br>
-                Hradné údolie 123, 811 01 Bratislava, SR<br>
+                Hraničná 5825/24, 821 05 Bratislava, SR<br>
                 Email:
-                <a href="mailto:#">vavaland@gmail.com</a><br>
+                <a href="mailto:#">info@vavaland.sk</a><br>
                 <abbr title="Phone">
                     Tel.:</abbr>
-                +421 0123 456 789<br>
+                +421 905 836 661<br>
                 Web : <a href="#" target="_blank">www.vavaland.sk</a><br>
-                IČO: 12 123 456
             </address>
         </div>
     </div>
@@ -112,139 +147,7 @@
 
 </form><br><br><br><br><br><br>
 
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d170410.75606214063!2d16.975831681838347!3d48.13592437471889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476c89360aca6197%3A0x631f9b82fd884368!2sBratislava%2C%20Slovakia!5e0!3m2!1sen!2sie!4v1576501189591!5m2!1sen!2sie" width="1920" height="300" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-
-<br><br><br><br><br><br>
-
-<footer class="page-footer font-small indigo">
-
-
-  <div class="container text-center text-md-left">
-
-
-    <div class="row">
-
-
-      <div class="col-md-3 mx-auto">
-
-
-        <h5 class="font-weight-bold mt-3 mb-4">Kontaktné informácie</h5>
-
-        <ul class="list-unstyled">
-          <li>
-            Janko Hraško
-          </li>
-          <li>
-            Hradne udolie 123
-          </li>
-          <li>
-            821 07 Bratislava
-          </li>
-          <li>
-            Recepcia:&nbsp;<a href="tel:+4210245520572" class="footer-links">01/ 12345</a>
-          </li>
-          <li>
-            Objednavky: &nbsp;<a href="tel:+421024524258" class="footer-links">01/ 12345</a>
-          </li>
-          <li>
-            Zodpovedna osoba: &nbsp;<a href="tel:+4210245244114" class="footer-links">01/ 12345</a>
-          </li>
-        </ul>
-
-      </div>
-
-
-      <hr class="clearfix w-100 d-md-none">
-
-
-      <div class="col-md-3 mx-auto">
-
-
-        <h5 class="font-weight-bold mt-3 mb-4">Navigácia</h5>
-
-        <ul class="list-unstyled">
-          <li>
-            <a href="#!" class="footer-links">Rozvrh</a>
-          </li>
-          <li>
-            <a href="#!" class="footer-links">Aktivity</a>
-          </li>
-          <li>
-            <a href="#!" class="footer-links">Pre dospelých</a>
-          </li>
-          <li>
-            <a href="#!" class="footer-links">Hala a miestnosti</a>
-          </li>
-          <li>
-            <a href="#!" class="footer-links">Oslavy</a>
-          </li>
-          <li>
-            <a href="#!" class="footer-links">Prihlásenie</a>
-          </li>
-          <li>
-            <a href="#!" class="footer-links">Registrácia</a>
-          </li>
-        </ul>
-
-      </div>
-
-
-      <hr class="clearfix w-100 d-md-none">
-
-
-      <div class="col-md-3 mx-auto">
-
-
-        <h5 class="font-weight-bold  mt-3 mb-4">Sociálne siete</h5>
-
-        <ul class="list-unstyled">
-          <li>
-            Nájdete nás na sociálnych<br> sieťach
-          </li><br><br>
-          <li><i class="fab fa-facebook-f" id="fbc"></i>&nbsp;&nbsp;&nbsp;<i class="fab fa-instagram"
-              id="insta"></i>&nbsp;&nbsp;&nbsp;<i class="fab fa-youtube" id="ytb"></i></li>
-
-        </ul>
-
-      </div>
-
-
-      <hr class="clearfix w-100 d-md-none">
-
-
-      <div class="col-md-3 mx-auto">
-
-
-        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Lorem</h5>
-
-        <ul class="list-unstyled">
-          <li>
-            <a href="#!" class="footer-links">Lorem</a>
-          </li>
-          <li>
-            <a href="#!" class="footer-links">Lorem</a>
-          </li>
-          <li>
-            <a href="#!" class="footer-links">Lorem</a>
-          </li>
-          <li>
-            <a href="#!" class="footer-links">Lorem</a>
-          </li>
-          <li>
-            <a href="#!" class="footer-links">Lorem</a>
-          </li>
-        </ul>
-
-      </div>
-
-
-    </div>
-
-
-  </div>
-</footer>
-
-
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2662.3156075235233!2d17.158643515057822!3d48.14272035878266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476c88da7adeda23%3A0x54570e11c3d21569!2sHrani%C4%8Dn%C3%A1%205825%2C%20821%2005%20Bratislava%2C%20Slovakia!5e0!3m2!1sen!2sie!4v1578309050729!5m2!1sen!2sie" width="1920" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
 
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
 integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
