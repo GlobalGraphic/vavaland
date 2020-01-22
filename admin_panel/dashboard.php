@@ -25,7 +25,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 <body>
 <nav id="menu" class="navbar navbar-expand-md bg-white navbar-light navbar-custom fixed-top">
     <a class="navbar-brand" href="#">
-      <h2>Administračná zóna</h2>
+      <h2>Admin zóna</h2>
       <p class="text-danger">Prihlásený admin : <?php echo htmlspecialchars($_SESSION["username"]); ?></p>
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -33,9 +33,6 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     </button>
     <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
       <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="../index.html">Domov</a>
-        </li>
         <li class="nav-item">
           <a class="nav-link" href="dashboard.php?id=tvorba">Tvorba Rozvrhu</a>
         </li>
@@ -53,6 +50,12 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         </li>
         <li class="nav-item" id="fero">
           <a class="nav-link" href="dashboard.php?id=rezervacie">Sledovanie rezervácií</a>
+        </li>
+        <li class="nav-item" id="fero">
+          <a class="nav-link" href="dashboard.php?id=oslavy">Oslavy-Priestory-Tábory</a>
+        </li>
+        <li class="nav-item" id="fero">
+          <a class="nav-link" href="dashboard.php?id=deti">Rezervácie na detské kurzy</a>
         </li>
       </ul>
     </div>
@@ -84,6 +87,14 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
                     case "novinky":
                     include "novinky.php";
+                    break;
+
+                    case "deti":
+                    include "deti.php";
+                    break;
+
+                    case "oslavy":
+                    include "oslavy.php";
                     break;
                 }
             ?>

@@ -15,6 +15,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="../../style.css?v=1">
+  <link rel="stylesheet" href="../login_reg.css">
   <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/90e4bc8c6b.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css"
@@ -78,6 +79,9 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                        <i class="fas fa-credit-card"></i><a href="profile.php?id=kredit" class="sub">Kredit</a>
                       </li>
                       <li class="sub_menu">
+                      <i class="fas fa-glass-cheers"></i><a href="profile.php?id=oslavy" class="sub">Oslavy</a>
+                      </li>
+                      <li class="sub_menu">
                         <i class="fas fa-power-off"></i><a href="profile.php?id=logout" class="sub">Odhlasenie</a>
                       </li>
                   </ul>
@@ -102,6 +106,10 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
                 case "kredit":
                 include "kredit.php";
+                break;
+
+                case "oslavy":
+                include "oslavy.php";
                 break;
 
                 case "logout":
