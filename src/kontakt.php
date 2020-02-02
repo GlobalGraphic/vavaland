@@ -71,7 +71,7 @@ include_once "phpmailer/SMTP.php";*/
           <a class="nav-link" href="hala_miestnosti.html">Hala a miestnosti</a>
         </li>
         <li class="nav-item" id="fero">
-          <a class="nav-link" href="oslavy.html">Oslavy</a>
+          <a class="nav-link" href="oslavy.html">Oslavy a denné tábory</a>
         </li>
         <li class="nav-item" id="fero">
           <a class="nav-link" href="kontakt.php">Kontakt</a>

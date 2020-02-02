@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     max-width: 100%; /*disable horizontal scroll*/
-    overflow-x: hidden;   
+    overflow-x: hidden; 
 }
 
 #carousel-inner {

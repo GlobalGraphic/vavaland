@@ -21,7 +21,7 @@ while ($row = mysqli_fetch_array($result,MYSQLI_ASSOC)) {
         <th scope="col">ID</th>
         <th scope="col">Meno</th>
         <th scope="col">Priezvisko</th>
-        <th scope="col">Kurz</th>
+        <th scope="col">Typ</th>
         <th scope="col">Čas</th>
         </tr>
     </thead>

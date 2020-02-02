@@ -17,7 +17,7 @@ const getSchedule = schedule => {
 			<thead>
 				<tr>
 					<th>Čas</th>
-					<th>Workout</th>
+					<th>Kurz</th>
 					<th>Obsadenosť</th>
 				</tr>
 			</thead>
@@ -37,8 +37,11 @@ const getSchedule = schedule => {
 						<i class="fa fa-unlock"></i>
 						<span data-ref="counter">${item.number}/${item.max}</span>
 					</div>
-					<button>
-						Reserve
+					<button class="prvy">
+						Rezervácia
+					</button>
+					<button class="druhy">
+						Zmazanie
 					</button>
 				</td>
 			</tr>
@@ -87,13 +90,12 @@ window.addEventListener("load", async () => {
 
 			// Render html
 			document.getElementById("schedule").innerHTML = getSchedule(response.data);
-			console.log(data);
 
 			// Just to update the styles and classes
 			data.forEach(item => updateCount(item));
 
 			// After reservation button is clicked
-			const buttons = document.querySelectorAll("button");
+			const buttons = document.querySelectorAll("button.prvy");
 			buttons.forEach(btn => {
 				btn.addEventListener("click", event => {
 					const parentElement = event.target.parentElement.parentElement;
@@ -132,6 +134,40 @@ window.addEventListener("load", async () => {
 					updateCount(item);
 				});
 			});
+
+			const buttonZ = document.querySelectorAll('button.druhy');
+			buttonZ.forEach(btn2 => {
+				btn2.addEventListener('click', event => {
+
+					const parentElement = event.target.parentElement.parentElement;
+					const item = data.find(item => item.id === parentElement.id);
+
+					if (timeouts[item.id]) clearTimeout(timeouts[item.id]);
+
+					timeouts[item.id] = setTimeout(() => {
+						axios({
+							method: "POST",
+							url: "delete.php",
+							data: {
+								id: item.id,
+							},
+							headers: {
+								"Content-Type": "application/json"
+							}
+						})
+							.then(response => {
+								// Whatever
+								console.log(response.data);
+							})
+							.catch(e => {
+								item.number--;
+								updateCount(item);
+								console.error(e);
+							});
+					}, 1500);
+				});
+			});
+
 		})
 		.catch(e => console.error(e));
 });

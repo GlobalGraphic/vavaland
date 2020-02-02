@@ -24,6 +24,7 @@ $_POST = json_decode(file_get_contents("php://input"), true);
 
 if (isset($_POST["value"])) {
 
+
 	$id = $_SESSION['id'];
 
 	$sql3 = "SELECT * FROM users WHERE id = '".$_SESSION['id']."' ";
@@ -32,7 +33,8 @@ if (isset($_POST["value"])) {
 
 	$row = mysqli_fetch_array($result,MYSQLI_ASSOC);
 
-	$priezvisko = $row["priezvisko"]; 
+	$priezvisko = $row["priezvisko"];
+	$email = $row["email"];
 
 	//	 vlozenie udajov
 	$sql = "UPDATE schedules SET number = " . $_POST["value"] . " WHERE `id` = " . $_POST["id"];
@@ -45,6 +47,35 @@ if (isset($_POST["value"])) {
 	} else {
 		echo "ERROR" . $sql . " " . mysqli_error($conn);
 	}
+
+	//email notifikacia
+
+	$msg = "";
+/*include_once "phpmailer/PHPMailer.php";
+include_once "phpmailer/Exception.php";
+include_once "phpmailer/SMTP.php";*/
+
+    $meno = $_SESSION['username'];
+    $emailek = $email;
+    $predmet = "oznámenie o rezervácií kurzu";
+    $msg= '<div class="jumbotron">'. 'Ďakujeme za rezerváciu miesta na tomto kurze:' . '<br>' . $_POST['kurz'] .'<br>' . 'Tým vavaland.sk' .'</div>';
+
+    require('phpmailer/PHPMailerAutoload.php');
+  
+      $mail = new PHPMailer();
+      $mail->CharSet = "UTF-8";
+      $mail->addAddress($emailek);
+      $mail->setFrom('info@vavaland.sk');
+      $mail->Subject = $predmet;
+      $mail->isHTML(true);
+      $mail->Body = $msg;
+
+      if ($mail->send()) {
+          header("Location: email_gen_msg.html");
+      } else{
+         //$msg = "Vyskitla sa chyba, skúste to znova!";
+        echo 'nastala chyba';
+       }
 
 	$conn->close();
 }

@@ -38,7 +38,7 @@ const getSchedule = schedule => {
 						<span data-ref="counter">${item.number}/${item.max}</span>
 					</div>
 					<button>
-						Reserve
+						Rezervácia
 					</button>
 				</td>
 			</tr>
@@ -98,7 +98,45 @@ window.addEventListener("load", async () => {
 					const parentElement = event.target.parentElement.parentElement;
 					const item = data.find(item => item.id === parentElement.id);
 
+					if(parseInt(item.number) < parseInt(item.max)) {
+						// Get the modal
+						var modal = document.getElementById("myModal");
+						modal.style.display = "block";
+
+						// Get the <span> element that closes the modal
+						var span = document.getElementsByClassName("close")[0];
+
+						span.addEventListener('click', function(){
+							modal.style.display = "none";
+						});
+
+						window.addEventListener('click', function(event){
+							if (event.target == modal) {
+								modal.style.display = "none";
+							}
+						});
+
+					}else {
+						// Get the modal
+						var modal = document.getElementById("myModal");
+						modal.style.display = "none";
+
+						// Get the <span> element that closes the modal
+						var span = document.getElementsByClassName("close")[0];
+
+						span.addEventListener('click', function(){
+							modal.style.display = "none";
+						});
+
+						window.addEventListener('click', function(event){
+							if (event.target == modal) {
+								modal.style.display = "none";
+							}
+						});
+					}
+
 					if (parseInt(item.number) < parseInt(item.max)) {
+
 						item.number++;
 
 						// clear all unfilled other timeouts for ajax request

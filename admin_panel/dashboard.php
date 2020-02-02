@@ -23,7 +23,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <title>Admin Dashboard</title>
 </head>
 <body>
-<nav id="menu" class="navbar navbar-expand-md bg-white navbar-light navbar-custom fixed-top">
+<nav id="menu" class="navbar navbar-expand-xs bg-white navbar-light navbar-custom fixed-top">
     <a class="navbar-brand" href="#">
       <h2>Admin zóna</h2>
       <p class="text-danger">Prihlásený admin : <?php echo htmlspecialchars($_SESSION["username"]); ?></p>

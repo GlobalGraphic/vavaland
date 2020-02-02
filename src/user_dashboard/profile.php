@@ -46,7 +46,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
           <a class="nav-link" href="../../src/hala_miestnosti.html">Hala a miestnosti</a>
         </li>
         <li class="nav-item" id="fero">
-          <a class="nav-link" href="../../src/oslavy.html">Oslavy</a>
+          <a class="nav-link" href="../../src/oslavy.html">Oslavy a denné tábory</a>
         </li>
         <li class="nav-item" id="fero">
           <a class="nav-link" href="../../src/kontakt.php">Kontakt</a>
@@ -79,7 +79,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                        <i class="fas fa-credit-card"></i><a href="profile.php?id=kredit" class="sub">Kredit</a>
                       </li>
                       <li class="sub_menu">
-                      <i class="fas fa-glass-cheers"></i><a href="profile.php?id=oslavy" class="sub">Oslavy</a>
+                      <i class="fas fa-glass-cheers"></i><a href="profile.php?id=oslavy" class="sub">Oslavy/Tábory/Miestnosti</a>
                       </li>
                       <li class="sub_menu">
                         <i class="fas fa-power-off"></i><a href="profile.php?id=logout" class="sub">Odhlasenie</a>

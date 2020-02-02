@@ -17,17 +17,20 @@ if($conn->connect_error) {
 // get json from request
 $_POST = json_decode(file_get_contents("php://input"), true);
 
-if (isset($_POST["value"])) {
+if (isset($_POST["id"])) {
 
 	//	 vlozenie udajov
-	$sql = "UPDATE schedules SET number = " . $_POST["value"] . " WHERE `id` = " . $_POST["id"];
+	$sql = "DELETE FROM schedules WHERE `id` = " . $_POST["id"];
 
 	//	kontrola ci sa udaje uspesne vlozili
 	if (mysqli_query($conn, $sql)) {
-		echo "Uspesne pridane";
+//		echo "Uspesne pridane";
 	} else {
 		echo "ERROR" . $sql . " " . mysqli_error($conn);
 	}
 
 	$conn->close();
 }
+
+
+?>
