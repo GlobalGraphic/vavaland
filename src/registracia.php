@@ -3,8 +3,8 @@
 require_once "config.php";
  
 // Define variables and initialize with empty values
-$username = $password = $cislo = $adresa = $priezvisko = $date = $email = $confirm_password = "";
-$username_err = $password_err = $cislo_err = $adresa_err = $date_err = $priezvisko_err = $email_err = $confirm_password_err = "";
+$username = $password = $cislo = $priezvisko = $date = $email = $confirm_password = "";
+$username_err = $password_err = $cislo_err = $date_err = $priezvisko_err = $email_err = $confirm_password_err = "";
  
 // Processing form data when form is submitted
 if($_SERVER["REQUEST_METHOD"] == "POST"){
@@ -56,13 +56,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $cislo = trim($_POST["cislo"]);
     }
 
-    // Validate address
-    if(empty(trim($_POST["adresa"]))){
-        $adresa_err = "Prosim zadajte vášu adresu";     
-    }else{
-        $adresa = trim($_POST["adresa"]);
-    }
-
     // Validate email
     if(empty(trim($_POST["email"]))){
         $email_err = "Prosim zadajte váš email";     
@@ -93,11 +86,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     if(empty($username_err) && empty($password_err) && empty($date_err) && empty($cislo_err) && empty($adresa_err) && empty($email_err) && empty($priezvisko_err)  && empty($confirm_password_err)){
         
         // Prepare an insert statement
-        $sql = "INSERT INTO users (username, priezvisko, email, cislo, adresa, password) VALUES (?, ?, ?, ?, ?, ?)";
+        $sql = "INSERT INTO users (username, priezvisko, email, cislo, password) VALUES (?, ?, ?, ?, ?)";
          
         if($stmt = $mysqli->prepare($sql)){
             // Bind variables to the prepared statement as parameters
-            $stmt->bind_param("sssiss", $param_username, $param_priezvisko, $param_email, $param_cislo, $param_adresa, $param_password);
+            $stmt->bind_param("sssis", $param_username, $param_priezvisko, $param_email, $param_cislo, $param_password);
             
             // Set parameters
             $param_username = $username;
@@ -105,7 +98,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             $param_email = $email;
             $param_cislo = $cislo;
             $param_priezvisko = $priezvisko;
-            $param_adresa = $adresa;
             
             // Attempt to execute the prepared statement
             if($stmt->execute()){
@@ -173,11 +165,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <div class="form-group <?php echo (!empty($email_err)) ? 'has-error' : ''; ?>">
             <input type="email" id="login" class="fadeIn second" name="email" value="<?php echo $email; ?>" placeholder="Email">
             <div class="help-block"><?php echo $email_err; ?></div>
-        </div>
-
-        <div class="form-group <?php echo (!empty($adresa_err)) ? 'has-error' : ''; ?>">
-            <input type="text" id="login" class="fadeIn second" name="adresa" value="<?php echo $adresa; ?>" placeholder="Adresa">
-            <div class="help-block"><?php echo $adresa_err; ?></div>
         </div>
 
         <div class="form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">

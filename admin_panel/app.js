@@ -142,9 +142,6 @@ window.addEventListener("load", async () => {
 					const parentElement = event.target.parentElement.parentElement;
 					const item = data.find(item => item.id === parentElement.id);
 
-					if (timeouts[item.id]) clearTimeout(timeouts[item.id]);
-
-					timeouts[item.id] = setTimeout(() => {
 						axios({
 							method: "POST",
 							url: "delete.php",
@@ -156,15 +153,21 @@ window.addEventListener("load", async () => {
 							}
 						})
 							.then(response => {
-								// Whatever
-								console.log(response.data);
+								data = data.filter(i => i.id !== item.id);
+								document.getElementById('schedule').innerHTML = getSchedule(data);
+								console.log('uspesne zmazane');
 							})
 							.catch(e => {
 								item.number--;
 								updateCount(item);
 								console.error(e);
 							});
-					}, 1500);
+
+							function timedRefresh(timeoutPeriod) {
+								setTimeout("location.reload(true);",timeoutPeriod);
+							}
+							
+							window.onload = timedRefresh(6000);
 				});
 			});
 

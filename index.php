@@ -1,3 +1,35 @@
+<?php
+if(isset($_POST['news_btn'])){
+
+        define('DB_SERVER', 'mysql80.websupport.sk:3314');
+        define('DB_USERNAME', 'l2mlyiv5');
+        define('DB_PASSWORD', 'Nn4&,~TpYt');
+        define('DB_NAME', 'l2mlyiv5');
+
+        // pokusenie sa spojit s mysql DB
+
+        $conn = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
+
+        // kontrola pripojenia
+
+        if($conn->connect_error) {
+            die('ERROR: Nieje mozne sa spojit s DB'.  $conn->connect_error);
+        }
+
+
+        $sql = "INSERT INTO news (email)
+            VALUES ('". $_POST['email']."')";
+
+            
+            if (mysqli_query($conn, $sql)) {
+                echo "good";
+            }else {
+                echo "Error" . $sql . "" . mysqli_error($conn);
+            }
+            $conn->close();
+}
+
+?>
 <!DOCTYPE html>
 <html lang="sk">
 <head>
@@ -36,8 +68,23 @@
         <li class="nav-item">
           <a class="nav-link" href="src/rozvrh.html">Rozvrh</a>
         </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Aktivity pre deti
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="https://vavaland.sk/src/sportove_kurzy.html">Športové kurzy</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="https://vavaland.sk/src/fyzio_kurzy.html">FYZIO kurzy</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="https://vavaland.sk/src/doucovanie.html">Doučovanie a jazykové kurzy</a>
+          </div>
+        </li>
         <li class="nav-item" id="fero">
           <a class="nav-link" href="src/dospely.html">Pre dospelých</a>
+        </li>
+        <li class="nav-item" id="fero">
+          <a class="nav-link" href="admin_panel/blog/blog.php">Blog</a>
         </li>
         <li class="nav-item" id="fero">
           <a class="nav-link" href="src/hala_miestnosti.html">Hala a miestnosti</a>
@@ -54,46 +101,7 @@
         </li>
       </ul>
     </div>
-  </nav><br><br><br>
-
-  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-    <ol class="carousel-indicators">
-      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-    </ol>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img class="d-block w-100" src="assets/carousel_img/first.jpg" alt="First slide">
-        <div class="carousel-caption d-none d-md-block">
-          <h5>Prihlásenie na kurzy spustené !</h5>
-          <a href="src/registracia.php"><button class="btn btn-primary">Registruj sa</button></a>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img class="d-block w-100" src="assets/carousel_img/second.jpg" alt="Second slide">
-        <div class="carousel-caption d-none d-md-block">
-          <h5>Prihlásenie na kurzy spustené !</h5>
-          <a href="src/registracia.php"><button class="btn btn-primary">Registruj sa</button></a>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img class="d-block w-100" src="assets/carousel_img/third.jpg" alt="Third slide">
-        <div class="carousel-caption d-none d-md-block">
-          <h5>Prihlásenie na kurzy spustené !</h5>
-          <a href="src/registracia.php"><button class="btn btn-primary">Registruj sa</button></a>
-        </div>
-      </div>
-    </div>
-    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-  </div><br><br><br><br><br><br>
+  </nav><br><br><br><br><br><br>
 
   <div class="container text-center">
       <h1 id="head">Vavaland</h1>
@@ -135,22 +143,31 @@
   </div><br><br><br>
 
   <h2 class="heading2">Aktuality a novinky</h2><br><br>
-  <div class="container-fluid" id="second">
+  <div class="container-fluid" id="first">
     <div class="row">
-      <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
-        <img class="aaa" src="assets/photo1.jpg" alt="fotka 1">
-        <p class="text-bold">Nadpis aktuality ktorý môže byť na viac riadkov </p>
-        <a href="#" class="aktuality">Viac ></a>
+      <div class="col-lg-4 mw-100 first">
+        <p class="text-bold">Deň otvorených dverí</p>
+        <p>Pozývame Vás na deň otvorených dverí, ktorý sa bude konať v nedeľu 08.03.2020 v priestoroch
+VAVAlandu na Hraničnej ulici 24 od 14:00 hod do 18:00 hod. Môžete si pozrieť naše priestory,
+porozprávať sa s lektormi a trénermi a pre Vaše deti je pripravený program v telocvični.</p>
       </div>
-      <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
-        <img class="aaa" src="assets/photo1.jpg" alt="info">
-        <p class="text-bold">Nadpis aktuality ktorý môže byť na viac riadkov </p>
-        <a href="#" class="aktuality">Viac ></a>
+      <div class="col-lg-4 mw-100 second">
+      <p class="text-bold">Montessori dielničky</p>
+      <p>Pripravili sme pre Vás priestor, kde spoločne s Vaším dieťaťom prežijete príjemné inšpiratívne chvíle.
+Kúzelné montessori dielničky prebiehajú v  triedach s Montessori pomôckami a vhodnými materiálmi,
+ktoré sú Vašim deťom plne k dispozícii. Neoddeliteľnou súčasťou tohto prostredia je aj dospelý
+(rodič, prarodič, opatrovník), ktorý sa k dieťaťu chová s rešpektom a úctou, ale zároveň je pre dieťa
+modelom, vzorom a skúseným sprievodcom. V priebehu dielničiek máte čas venovať sa jeden
+druhému. Na dielničky sa môžete prihlásiť prostredníctvom formulára pri popise kurzu.</p>
       </div>
-      <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
-        <img class="aaa" src="assets/photo1.jpg" alt="info">
-        <p class="text-bold">Nadpis aktuality ktorý môže byť na viac riadkov </p>
-        <a href="#" class="aktuality">Viac ></a>
+      <div class="col-lg-4 mw-100 third">
+      <p class="text-bold">Montessori dielničky</p>
+      <p>Pripravili sme pre Vás priestor, kde spoločne s Vaším dieťaťom prežijete príjemné inšpiratívne chvíle.
+Kúzelné montessori dielničky prebiehajú v  triedach s Montessori pomôckami a vhodnými materiálmi,
+ktoré sú Vašim deťom plne k dispozícii. Neoddeliteľnou súčasťou tohto prostredia je aj dospelý
+(rodič, prarodič, opatrovník), ktorý sa k dieťaťu chová s rešpektom a úctou, ale zároveň je pre dieťa
+modelom, vzorom a skúseným sprievodcom. V priebehu dielničiek máte čas venovať sa jeden
+druhému. Na dielničky sa môžete prihlásiť prostredníctvom formulára pri popise kurzu.</p>
       </div>
     </div>
   </div><br><br><br>
@@ -201,9 +218,9 @@
       <h3 class="news_head">Pridaj sa k nám</h3>
       <p class="head_para">Chceš vedieť viac o tréningu, presnom dátume otvorenia, novinkách a akciách?<br>
         Pošli nám svoj email a my ťa budeme informovať.</p>
-			<form action="#" method="Post">
-				<input type="text" name="text" placeholder="Tvôj email" id="text">
-				<button id="news_btn" type="button" class="btn btn-secondary">Subscribe</button>
+			<form action="#" method="POST">
+      <input type="email" name="email" placeholder="Tvôj email" id="text">
+				<input type="submit" id="news_btn" name="news_btn" class="btn btn-primary" value="Subscribe">
 			</form>
 		</div>
 	</section><br><br><br>
@@ -258,7 +275,7 @@
               <a href="src/dospely.html" class="footer-links">Pre dospelých</a>
             </li>
             <li>
-              <a href="src/hala_miestnosti.html"footer-links">Hala a miestnosti</a>
+              <a href="src/hala_miestnosti.html" class="footer-links">Hala a miestnosti</a>
             </li>
             <li>
               <a href="src/oslavy.html" class="footer-links">Oslavy</a>
@@ -286,8 +303,8 @@
             <li>
               Nájdete nás na sociálnych<br> sieťach
             </li><br><br>
-            <li><i class="fab fa-facebook-f" id="fbc"></i>&nbsp;&nbsp;&nbsp;<i class="fab fa-instagram"
-                id="insta"></i>&nbsp;&nbsp;&nbsp;<i class="fab fa-youtube" id="ytb"></i></li>
+            <li><a href="https://www.facebook.com/VAVA-LAND-104947017722760/?modal=admin_todo_tour" target="_blank"><i class="fab fa-facebook-f" id="fbc"></a></i>&nbsp;&nbsp;&nbsp;<a href="https://www.instagram.com/vavaland.sk/"><i class="fab fa-instagram"
+                id="insta"></i></a>&nbsp;&nbsp;&nbsp;<i class="fab fa-youtube" id="ytb"></i></li>
 
           </ul>
 
@@ -323,14 +340,13 @@
     </div>
   </footer>
 
-
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+  integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+  crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
     crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/js/bootstrap.min.js"
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/js/bootstrap.min.js"
     integrity="sha384-3qaqj0lc6sV/qpzrc1N5DC6i1VRn/HyX4qdPaiEFbn54VjQBEU341pvjz7Dv3n6P"
     crossorigin="anonymous"></script>
 </body>

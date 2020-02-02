@@ -39,11 +39,17 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         <li class="nav-item">
           <a class="nav-link" href="dashboard.php?id=default">Rozvrh</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="dashboard.php?id=welcome">Blog</a>
+        </li>
         <li class="nav-item" id="fero">
           <a class="nav-link" href="dashboard.php?id=fotog">Pridanie fotiek</a>
         </li>
         <li class="nav-item" id="fero">
           <a class="nav-link" href="dashboard.php?id=novinky">Pridanie noviniek</a>
+        </li>
+        <li class="nav-item" id="fero">
+          <a class="nav-link" href="dashboard.php?id=newsletter">Newsletter</a>
         </li>
         <li class="nav-item" id="fero">
           <a class="nav-link" href="dashboard.php?id=registracie">Registrované osoby</a>
@@ -79,6 +85,14 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
                     case "rezervacie":
                     include "rezervacie.php";
+                    break;
+
+                    case "welcome":
+                    include "welcome.php";
+                    break;
+
+                    case "newsletter":
+                    include "news.php";
                     break;
 
                     case "fotog":

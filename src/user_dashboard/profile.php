@@ -59,7 +59,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     </div>
   </nav><br><br><br><br><br><br><br>
 
-  <h2 class="heading2">ZÁKAZNÍCKA ZÓNA <br>Prihlaseny uzivatel : <?php echo htmlspecialchars($_SESSION["username"]); ?></h2>
+  <h2 class="heading2" style="color: #000;">ZÁKAZNÍCKA ZÓNA <br>Prihlaseny uzivatel : <?php echo htmlspecialchars($_SESSION["username"]); ?></h2>
   <div class="container-fluid" id="first">
     <div class="row">
       <div class="col-lg-4 mw-100">
@@ -73,7 +73,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                       <i class="far fa-calendar-alt"></i><a href="profile.php?id=rozvrh" class="sub">Rozvrh</a>
                       </li>
                       <li class="sub_menu">
-                        <i class="far fa-newspaper"></i><a href="profile.php?id=novinky" class="sub">Novinky</a>
+                        <i class="far fa-newspaper"></i><a href="profile.php?id=novinky" class="sub">Akutálne prihlásené hodiny</a>
                       </li>
                       <li class="sub_menu">
                        <i class="fas fa-credit-card"></i><a href="profile.php?id=kredit" class="sub">Kredit</a>

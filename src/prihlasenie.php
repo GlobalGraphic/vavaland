@@ -6,37 +6,37 @@ session_start();
 require_once "config.php";
  
 // Define variables and initialize with empty values
-$username = $password = "";
-$username_err = $password_err = "";
+$email = $password = "";
+$email_err = $password_err = "";
  
 // Processing form data when form is submitted
 if($_SERVER["REQUEST_METHOD"] == "POST"){
  
     // Check if username is empty
-    if(empty(trim($_POST["username"]))){
-        $username_err = "Please enter username.";
+    if(empty(trim($_POST["email"]))){
+        $email_err = "Prosím zadajte váš email!";
     } else{
-        $username = trim($_POST["username"]);
+        $email = trim($_POST["email"]);
     }
     
     // Check if password is empty
     if(empty(trim($_POST["password"]))){
-        $password_err = "Please enter your password.";
+        $password_err = "Prosím zadajte vaše heslo!";
     } else{
         $password = trim($_POST["password"]);
     }
     
     // Validate credentials
-    if(empty($username_err) && empty($password_err)){
+    if(empty($email_err) && empty($password_err)){
         // Prepare a select statement
-        $sql = "SELECT id, username, password FROM users WHERE username = ?";
+        $sql = "SELECT id, email, password FROM users WHERE email = ?";
         
         if($stmt = $mysqli->prepare($sql)){
             // Bind variables to the prepared statement as parameters
-            $stmt->bind_param("s", $param_username);
+            $stmt->bind_param("s", $param_email);
             
             // Set parameters
-            $param_username = $username;
+            $param_email = $email;
             
             // Attempt to execute the prepared statement
             if($stmt->execute()){
@@ -46,7 +46,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 // Check if username exists, if yes then verify password
                 if($stmt->num_rows == 1){                    
                     // Bind result variables
-                    $stmt->bind_result($id, $username, $hashed_password);
+                    $stmt->bind_result($id, $email, $hashed_password);
                     if($stmt->fetch()){
                         if(password_verify($password, $hashed_password)){
                             // Password is correct, so start a new session
@@ -55,21 +55,21 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             // Store data in session variables
                             $_SESSION["loggedin"] = true;
                             $_SESSION["id"] = $id;
-                            $_SESSION["username"] = $username;                            
+                            $_SESSION["email"] = $email;                            
                             
                             // Redirect user to welcome page
                             header("location: user_dashboard/profile.php");
                         } else{
                             // Display an error message if password is not valid
-                            $password_err = "The password you entered was not valid.";
+                            $password_err = "Heslo ktoré ste zadali nieje správne!";
                         }
                     }
                 } else{
                     // Display an error message if username doesn't exist
-                    $username_err = "No account found with that username.";
+                    $email_err = "Účet neexistuje!";
                 }
             } else{
-                echo "Oops! Something went wrong. Please try again later.";
+                echo "Oops! Niečo zlyhalo skúste to prosím neskôr.";
             }
         }
         
@@ -112,9 +112,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     <!-- Login Form -->
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-        <div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
-            <input type="text" id="login" class="fadeIn second" name="username" value="<?php echo $username; ?>" placeholder="Meno">
-            <div class="help-block"><?php echo $username_err; ?></div>
+        <div class="form-group <?php echo (!empty($email_err)) ? 'has-error' : ''; ?>">
+            <input type="text" id="login" class="fadeIn second" name="email" value="<?php echo $email; ?>" placeholder="E-mail">
+            <div class="help-block"><?php echo $email_err; ?></div>
         </div>
 
         <div class="form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
