@@ -27,13 +27,16 @@
         <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="../index.html">Domov</a>
+              <a class="nav-link" href="../index.php">Domov</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="rozvrh.html">Rozvrh</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="dospely.html">Pre dospelých</a>
+              <a class="nav-link" href="dospely.php">Pre dospelých</a>
+            </li>
+            <li class="nav-item" id="fero">
+              <a class="nav-link" href="admin_panel/blog/blog.php">Blog</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="hala_miestnosti.html">Hala a miestnosti</a>
@@ -54,7 +57,7 @@
 
       <div class="container">
         <h2 class="kurz1">Pre dospelých</h2>
-        <p class="text-danger">Pre rezerváciu na daný kury je potrebné sa registrovať do uživateľskéj zóný <a href="https://www.vavaland.sk/src/registracia.php">tu</a> a následne po prihlásení v časti rozvrh v ľavom menu si rezervujete vaše miesto na kurz.</p>
+        <p class="text-danger">Pre rezerváciu na daný kury je potrebné sa registrovať do uživateľskéj zóni <a href="https://www.vavaland.sk/src/registracia.php">tu</a> a následne po prihlásení v časti rozvrh v ľavom menu si rezervujete vaše miesto na kurz.</p>
           
           <h2 class="kurz_hd">SOM® tréning</h2>
           <p class="p_hd">predstavuje cvičenie, ktoré naše telo aj myseľ udržuje v dobrej kondícii. Nájdete v ňom kardio ale aj rysovacie a redukčné prvky, vďaka ktorým sa zbavíte tukových zásob. Vyrysujete sa a zároveň získate zdravé sebavedomie a kondíciu. Počas SOM tréningu cvičíte v skupine a každá hodina sa zameriava na iné partie a inú oblasť. Silové tréningy sa striedajú s intervalovými a dopĺňajú sa kardiom. V kombinácii s hudbou si na našich tréningoch nájde každý to svoje a odchádza plný energie a dobrej nálady.<br><a href="https://www.somtrening.sk/som-trening">somtrening.sk</a></p>
@@ -73,7 +76,43 @@
 
           <h2 class="kurz_hd">ASHTANGA Yoga pre začiatočníkov</h2>
           <p class="p_hd">Aštanga jóga je tradičný systém cvičenia pochádzajúci z Indie. Jedná sa o dynamickou formu jógy prepojujúcu jednotlivé pozície s dychom, prostredníctvom ktorého človek nadobúda vedomie vlastného tela a mysli. Jednotlivé ásany sú prepojené vinyásou – pohybom, ktorý v spojení so špeciálnym spôsobom dýchania pomáha udržovať telo zohriate a pomáha cvičiť intenzívnejšie. Cvičenie je náročnejšie, ale zvládnuteľné pre kohokoľvek, kto má záujem poznať svoje telo a myseľ. Na lekciách pre začiatočníkov bude pozornosť venovaná správnemu prevedeniu základných cvikov a na konci lekcie bude čas venovaný meditácii a odpočinku.</p>
-    </div>
+            
+
+          <?php
+                define('DB_SERVER', 'mysql80.websupport.sk:3314');
+                define('DB_USERNAME', 'l2mlyiv5');
+                define('DB_PASSWORD', 'Nn4&,~TpYt');
+                define('DB_NAME', 'l2mlyiv5');
+        
+                // pokusenie sa spojit s mysql DB
+        
+                $conn = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
+        
+                // kontrola pripojenia
+        
+                if($conn->connect_error) {
+                    die('ERROR: Nieje mozne sa spojit s DB'.  $conn->connect_error);
+                }
+
+                $sql = "SELECT * FROM dospely";
+
+                $result=mysqli_query($conn,$sql);
+
+                // Associative array
+                while ($row = mysqli_fetch_array($result,MYSQLI_ASSOC)) {
+                    $nadpis = $row['nadpis'];
+                    $content = $row['content'];
+                ?>
+                
+              <h2 class="kurz_hd"><?php echo $nadpis?></h2>
+              <p class="p_hd"><?php echo $content?></a></p>
+
+            <?php 
+            } 
+              mysqli_free_result($result);
+              mysqli_close($conn);
+            ?> 
+        </div>
 
       <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"

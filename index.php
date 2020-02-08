@@ -49,9 +49,122 @@ if(isset($_POST['news_btn'])){
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css"
     integrity="sha384-SI27wrMjH3ZZ89r4o+fGIJtnzkAnFs3E4qz9DIYioCQ5l9Rd/7UAa8DHcaL8jkWt" crossorigin="anonymous">
   <title>VAVAland</title>
+  <script>
+
+    function popup() {
+      var modal = document.getElementById("myModal");
+                        modal.style.display = "block";
+
+						// Get the <span> element that closes the modal
+						var span = document.getElementsByClassName("close")[0];
+
+						span.addEventListener('click', function(){
+							modal.style.display = "none";
+						});
+
+						window.addEventListener('click', function(event){
+							if (event.target == modal) {
+								modal.style.display = "none";
+							}
+						});
+    }
+  </script>
+  <style>
+    /* The Modal (background) */
+    .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            padding-top: 200px; /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+          }
+          
+          /* Modal Content */
+          .modal-content {
+            position: relative;
+            background-color: #fefefe;
+            margin: auto;
+            color: #1772cc;
+            padding: 0;
+            border: 1px solid #888;
+            width: 80%;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+            -webkit-animation-name: animatetop;
+            -webkit-animation-duration: 0.4s;
+            animation-name: animatetop;
+            animation-duration: 0.4s;
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+          }
+          
+          /* Add Animation */
+          @-webkit-keyframes animatetop {
+            from {top:-300px; opacity:0} 
+            to {top:0; opacity:1}
+          }
+          
+          @keyframes animatetop {
+            from {top:-300px; opacity:0}
+            to {top:0; opacity:1}
+          }
+          
+          /* The Close Button */
+          .close {
+            color: white;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+          }
+          
+          .close:hover,
+          .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+          }
+          
+          .modal-header {
+            padding: 2px 16px;
+            background-color: #64CC27;;
+            color: white;
+          }
+          
+          .modal-body {padding: 2px 16px;}
+          
+          .modal-footer {
+            padding: 2px 16px;
+            background-color: #64CC27;;
+            color: white;
+          }
+  </style>
 </head>
 
-<body id="body">
+<body id="body" onload="popup();">
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+<!-- Modal content -->
+<div class="modal-content">
+  <div class="modal-header">
+    <span class="close">&times;</span>
+  </div>
+  <div class="modal-body">
+    <h2 class="center">Prihlasovanie na kurzy otvorené !!!</h2>
+    <a class="text-center" href="src/rozvrh.html">Rozvrh aktuálnych kurzov nájdeš tu</a>
+    <p class="center">Ďakujeme<br>Tím Vavaland</p>
+  </div>
+  <div class="modal-footer">
+  </div>
+</div>
+
+</div>
 
   <nav id="menu" class="navbar navbar-expand-md bg-white navbar-light navbar-custom fixed-top">
     <a class="navbar-brand" href="index.html">
@@ -68,20 +181,8 @@ if(isset($_POST['news_btn'])){
         <li class="nav-item">
           <a class="nav-link" href="src/rozvrh.html">Rozvrh</a>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Aktivity pre deti
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="https://vavaland.sk/src/sportove_kurzy.html">Športové kurzy</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="https://vavaland.sk/src/fyzio_kurzy.html">FYZIO kurzy</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="https://vavaland.sk/src/doucovanie.html">Doučovanie a jazykové kurzy</a>
-          </div>
-        </li>
         <li class="nav-item" id="fero">
-          <a class="nav-link" href="src/dospely.html">Pre dospelých</a>
+          <a class="nav-link" href="src/dospely.php">Pre dospelých</a>
         </li>
         <li class="nav-item" id="fero">
           <a class="nav-link" href="admin_panel/blog/blog.php">Blog</a>
@@ -114,29 +215,26 @@ if(isset($_POST['news_btn'])){
   <div class="container-fluid" id="first">
     <div class="row">
       <div class="col-lg-4 mw-100 first">
-        <p class="headings">Športové kurzy</p>
+        <p class="headings" style="color: #1772CC;">Športové kurzy</p>
         <article>Pre svoje deti u nás nájdete pestrú ponuku kurzov od pomalších ako je kompenzačné cvičenie pre
           deti až po dynamické typy kurzov ako napríklad silovo-koordinačný tréning. Každý kurz z našej
           ponuky je trochu inak zameraný, ale všetky majú niečé spoločné.Na týchto kurzoch sa zameriavame hlavne na rozvoj hrubých pohybových schopností.</article>
-        <button class="btn program_btn" style="background-color: #1772CC;"><a href="src/sportove_kurzy.html" class="program-links">chcem
+        <button class="btn program_btn" style="background-color: #1772CC;"><a href="src/sportove_kurzy.php" class="program-links">chcem
             vedieť viac o programe</a></button>
       </div>
       <div class="col-lg-4 mw-100 second">
-        <p class="headings">FYZIO kurzy</p>
+        <p class="headings" style="color: #1772CC;">FYZIO kurzy</p>
         <article>V detstve sa vytvárajú základné kamene motoriky, ktoré bude dieťa, neskôr dospelý používať po celý
           svoj život. Preto je dôležité tieto základy postaviť čo najlepšie a najpevnejšie.V dnešnej dobe
           môžeme u veľa detí vidieť odchýlky od správneho držania tela (ploché nohy, chabé držanie tela,
           chybné postavenie panvy atď). Cieleným</article>
-        <button class="btn program_btn" style="background-color: #1772CC;"><a href="src/fyzio_kurzy.html" class="program-links">chcem
+        <button class="btn program_btn" style="background-color: #1772CC;"><a href="src/fyzio_kurzy.php" class="program-links">chcem
             vedieť viac o programe</a></button>
       </div>
       <div class="col-lg-4 mw-100 third">
-        <p class="headings">Doučovanie a jazykové kurzy</p>
-        <article>Tvorivá a zábavná angličtina pre deti. Učiť sa angličtinu je predsa oveľa ľahšie keď sa zabávate.
-          Vieme, ako urobiť učenie angličtiny jednoduchým, účinným a zábavným prostredníctvom hier,
-          pesničiek, kreslenia alebo ručných prác a videí.Naše malé skupinky zabezpečujú, že každé dieťa
-          dostane pozornosť, ktorú si zaslúži.</article>
-        <button class="btn program_btn" style="background-color: #1772CC;"><a href="src/doucovanie.html" class="program-links">chcem
+        <p class="headings" style="color: #1772CC;">Doučovanie, jazykové a iné kurzy</p>
+        <article>Snáď každý z nás sa  niekedy potreboval doučiť nejaký školský predmet. A asi každý z nás sa stretol s celou radou problémov. U nás veríme, že každý môže dosiahnuť skvelé výsledky. Ponúkame Vám skupinové doučovanie predmetov základných škôl, ktoré zostavujeme priamo na mieru klientovi alebo skupine.</article>
+        <button class="btn program_btn" style="background-color: #1772CC;"><a href="src/doucovanie.php" class="program-links">chcem
             vedieť viac o programe</a></button>
       </div>
     </div>
@@ -146,13 +244,13 @@ if(isset($_POST['news_btn'])){
   <div class="container-fluid" id="first">
     <div class="row">
       <div class="col-lg-4 mw-100 first">
-        <p class="text-bold">Deň otvorených dverí</p>
+        <p class="text-bold" style="color: #1772CC;">Deň otvorených dverí</p>
         <p>Pozývame Vás na deň otvorených dverí, ktorý sa bude konať v nedeľu 08.03.2020 v priestoroch
 VAVAlandu na Hraničnej ulici 24 od 14:00 hod do 18:00 hod. Môžete si pozrieť naše priestory,
 porozprávať sa s lektormi a trénermi a pre Vaše deti je pripravený program v telocvični.</p>
       </div>
       <div class="col-lg-4 mw-100 second">
-      <p class="text-bold">Montessori dielničky</p>
+      <p class="text-bold" style="color: #1772CC;">Montessori dielničky</p>
       <p>Pripravili sme pre Vás priestor, kde spoločne s Vaším dieťaťom prežijete príjemné inšpiratívne chvíle.
 Kúzelné montessori dielničky prebiehajú v  triedach s Montessori pomôckami a vhodnými materiálmi,
 ktoré sú Vašim deťom plne k dispozícii. Neoddeliteľnou súčasťou tohto prostredia je aj dospelý
@@ -161,7 +259,7 @@ modelom, vzorom a skúseným sprievodcom. V priebehu dielničiek máte čas ve
 druhému. Na dielničky sa môžete prihlásiť prostredníctvom formulára pri popise kurzu.</p>
       </div>
       <div class="col-lg-4 mw-100 third">
-      <p class="text-bold">Montessori dielničky</p>
+      <p class="text-bold" style="color: #1772CC;">Montessori dielničky</p>
       <p>Pripravili sme pre Vás priestor, kde spoločne s Vaším dieťaťom prežijete príjemné inšpiratívne chvíle.
 Kúzelné montessori dielničky prebiehajú v  triedach s Montessori pomôckami a vhodnými materiálmi,
 ktoré sú Vašim deťom plne k dispozícii. Neoddeliteľnou súčasťou tohto prostredia je aj dospelý
@@ -286,6 +384,7 @@ druhému. Na dielničky sa môžete prihlásiť prostredníctvom formulára pri 
             <li>
               <a href="src/registracia.php" class="footer-links">Registrácia</a>
             </li>
+            <li><a href="https://vavaland.sk/cennikvavaland2020.pdf" class="footer-links">Cenník</a></li>
           </ul>
 
         </div>
@@ -304,7 +403,7 @@ druhému. Na dielničky sa môžete prihlásiť prostredníctvom formulára pri 
               Nájdete nás na sociálnych<br> sieťach
             </li><br><br>
             <li><a href="https://www.facebook.com/VAVA-LAND-104947017722760/?modal=admin_todo_tour" target="_blank"><i class="fab fa-facebook-f" id="fbc"></a></i>&nbsp;&nbsp;&nbsp;<a href="https://www.instagram.com/vavaland.sk/"><i class="fab fa-instagram"
-                id="insta"></i></a>&nbsp;&nbsp;&nbsp;<i class="fab fa-youtube" id="ytb"></i></li>
+                id="insta"></i></a></li>
 
           </ul>
 
@@ -339,7 +438,6 @@ druhému. Na dielničky sa môžete prihlásiť prostredníctvom formulára pri 
 
     </div>
   </footer>
-
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
   integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
   crossorigin="anonymous"></script>

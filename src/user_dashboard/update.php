@@ -40,7 +40,7 @@ if (isset($_POST["value"])) {
 	$sql = "UPDATE schedules SET number = " . $_POST["value"] . " WHERE `id` = " . $_POST["id"];
 
 	// vlozi session meno(prihlasovacie meno) do db aby si vedelo ktory user je uz registrovany
-	$sql2 = "INSERT INTO rezervacie(user_id,user_surname, kurz) VALUES ('".$_SESSION['username']."','".$priezvisko."','".$_POST['kurz']."')";
+	$sql2 = "INSERT INTO rezervacie(user_id,user_surname, kurz) VALUES ('".$_SESSION['email']."','".$priezvisko."','".$_POST['kurz']."')";
 	//	kontrola ci sa udaje uspesne vlozili
 	if (mysqli_query($conn, $sql) && mysqli_query($conn, $sql2)) {
 		echo "Uspesne rezervovane!";

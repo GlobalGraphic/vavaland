@@ -28,13 +28,16 @@
         <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="../index.html">Domov</a>
+              <a class="nav-link" href="../index.php">Domov</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="rozvrh.html">Rozvrh</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="dospely.html">Pre dospelých</a>
+              <a class="nav-link" href="dospely.php">Pre dospelých</a>
+            </li>
+            <li class="nav-item" id="fero">
+              <a class="nav-link" href="admin_panel/blog/blog.php">Blog</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="hala_miestnosti.html">Hala a miestnosti</a>
@@ -55,7 +58,7 @@
 
       <div class="container">
         <h2 class="kurz1">Doučovanie a jazykové kurzy</h2>
-        <p class="text-danger">Pre rezerváciu na daný kury je potrebné sa registrovať do uživateľskéj zóný <a href="https://www.vavaland.sk/src/registracia.php">tu</a> a následne po prihlásení v časti rozvrh v ľavom menu si rezervujete vaše miesto na kurz.</p>
+        <p class="text-danger">Pre rezerváciu na daný kury je potrebné sa registrovať do uživateľskéj zóni <a href="https://www.vavaland.sk/src/registracia.php">tu</a> a následne po prihlásení v časti rozvrh v ľavom menu si rezervujete vaše miesto na kurz.</p>
           <p class="p_hd">Snáď každý z nás sa  niekedy potreboval doučiť nejaký školský predmet. A asi každý z nás sa stretol s celou radou problémov. U nás vo VAVAlande veríme, že každý môže dosiahnuť skvelé výsledky. Ponúkame Vám skupinové doučovanie predmetov základných škôl, ktoré zostavujeme priamo na mieru klientovi alebo skupine. Preto nás neváhajte kontaktovať so svojimi požiadavkami formou nezáväzného kontaktného formulára, ktorý nájdete tu: <a href="https://vavaland.sk/src/kontakt.php">Kontakt</a></p>
         
           <h2 class="kurz_hd">Angličtina pre deti od 03 – 06 rokov - škôlkári</h2>
@@ -68,6 +71,45 @@
           <p class="p_hd">Cieľom je aby ste počas materskej nezabudli, čo ste sa predtým pracne naučili, alebo si oprášili pred nástupom späť do práce, čo ste už stihli zabudnúť. Počas hodín sa účastníci zameriavajú na rozprávanie a počúvanie aby si doplnili slovnú zásobu, osvojili bežné hovorové výrazy a tak podporili plynulú konverzáciu. Mamičky si môžu so sebou vziať dieťa. V miestnosti je dostatok miesta na hranie aj lozenie a tiež hračky. 
             Vstupne na hodinu je 7,00 Eur a je potrebné si termín rezervovať cez rezervačný systém.
             </p>
+
+            <h2 class="kurz_hd">Montessori dielničky zamerané na cvičenia praktického života pre deti vo veku 2-3 roky</h2>
+          <p class="p_hd">PRAKTICKÝ ŽIVOT montessori - montessori pedagogika je (aj) o samostatnosti; cvičenia praktického života malých detí sú činnosti, ktoré vykonávame každý deň. Cvičenia praktického života deti učia tieto činnosti zvládnuť samostatne (prelievanie vody - aby si vedelo samé naliať vodu, rámiky s rôznym zapínaním - aby si vedelo samé zapnuť oblečenie, a pod.)  Pri cvičeniach praktického života sa deti učia samostatnosti pri starostlivosti o seba, o svoje okolie (polievanie kvetov, zametanie drobnej špiny, ..), dobré spôsoby (pri stolovaní, ako sa pozdraviť, ..), zahŕňajú aj pohybové cvičenia na rozvoj jemnej a hrubej motoriky. Montessori dielničky budú prebiehať za účasti rodiča vo forme kurzu 5 lekcií v nasledovných termínoch: štvrtok 12.03.2020 - 09:00 - 10:00 hod, utorok 17.03.2020 - 14:30 - 15:30 hod, štvrtok 26.03.2020 - 09:00 - 10:00 hod, utorok 31.03.2020 -  14:30 - 15:30 hod , štvrtok 09.04.2020 - 09:00 - 10:00 hod. Cena je 35 Eur/5 lekcií. <a href="https://vavaland.sk/src/prihl.php">Prihlásiť sa môžete tu:</a>
+            </p>
+
+            <?php
+                define('DB_SERVER', 'mysql80.websupport.sk:3314');
+                define('DB_USERNAME', 'l2mlyiv5');
+                define('DB_PASSWORD', 'Nn4&,~TpYt');
+                define('DB_NAME', 'l2mlyiv5');
+        
+                // pokusenie sa spojit s mysql DB
+        
+                $conn = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
+        
+                // kontrola pripojenia
+        
+                if($conn->connect_error) {
+                    die('ERROR: Nieje mozne sa spojit s DB'.  $conn->connect_error);
+                }
+
+                $sql = "SELECT * FROM doucovanie";
+
+                $result=mysqli_query($conn,$sql);
+
+                // Associative array
+                while ($row = mysqli_fetch_array($result,MYSQLI_ASSOC)) {
+                    $nadpis = $row['nadpis'];
+                    $content = $row['content'];
+                ?>
+                
+              <h2 class="kurz_hd"><?php echo $nadpis?></h2>
+              <p class="p_hd"><?php echo $content?></a></p>
+
+            <?php 
+            } 
+              mysqli_free_result($result);
+              mysqli_close($conn);
+            ?> 
     </div>
 
       <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"

@@ -28,13 +28,16 @@
     <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="../index.html">Domov</a>
+          <a class="nav-link" href="../index.php">Domov</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="rozvrh.html">Rozvrh</a>
         </li>
         <li class="nav-item" id="fero">
-          <a class="nav-link" href="dospely.html">Pre dospelých</a>
+          <a class="nav-link" href="dospely.php">Pre dospelých</a>
+        </li>
+        <li class="nav-item" id="fero">
+          <a class="nav-link" href="admin_panel/blog/blog.php">Blog</a>
         </li>
         <li class="nav-item" id="fero">
           <a class="nav-link" href="hala_miestnosti.html">Hala a miestnosti</a>
@@ -55,11 +58,14 @@
 
   <div class="container">
     <h2 class="kurz1">ROZPIS TRÉNINGOVÝCH HODÍN</h2>
-    <p class="p_hd">Pre rezerváciu skupinovej tréningovej hodiny sa musíš prihlásiť a rezervovať si miesto. Ak ešte nemáš účet, zaregistruj sa kliknutím <a href="registracia.php">tu</a>. Po prihlásení si svoje hodiny môžeš rezervovať v časti rezervácie.</p>
+    <p class="p_hd">Pre rezerváciu jednorázového vstupu  sa musíš prihlásiť a rezervovať si miesto.Ak ešte nemáš účet, zaregistruj sa kliknutím <a href="registracia.php">tu</a>.Pri kurzoch (kurz sa platí vopred a trvá určitý počet lekcií) je potrebné sa objednať pomocou formulára ktorý nájdeš tu (preklik na formulár pre rezerváciu na kurz) kde zadáš všetky potrebné údaje. Po výpočte ceny kurzovného ti bude zaslaný mail s potvrdením rezervácie miesta na kurz a údajmi pre zaplatenie kurzovného. V rámci rozvrhu kurzy uvidíš, ale nebudeš sa môcť na ne prihlásiť formou voľného vstupu.</p>
     <section id="schedule"></section><br><br><br>
   </div>
 
 
+<!--moment.js-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
 <script src="app.js"></script>

@@ -689,10 +689,13 @@ h2.zakon {
     margin-bottom: 40px;
 }
 
-
 /*nastavenie respozivity elementov na prislusne rozlisenie*/
 
 @media only screen and (max-width: 375px){
+
+    li.nav-item a{
+        margin-bottom: -10px;
+    }
 
     tr.tab:nth-child(2) {
         color: red;

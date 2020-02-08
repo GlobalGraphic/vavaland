@@ -34,13 +34,16 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="../../index.html">Domov</a>
+          <a class="nav-link" href="../../index.php">Domov</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="../../src/rozvrh.html">Rozvrh</a>
         </li>
         <li class="nav-item" id="fero">
           <a class="nav-link" href="../../src/dospely.html">Pre dospelých</a>
+        </li>
+        <li class="nav-item" id="fero">
+          <a class="nav-link" href="admin_panel/blog/blog.php">Blog</a>
         </li>
         <li class="nav-item" id="fero">
           <a class="nav-link" href="../../src/hala_miestnosti.html">Hala a miestnosti</a>
@@ -59,7 +62,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     </div>
   </nav><br><br><br><br><br><br><br>
 
-  <h2 class="heading2" style="color: #000;">ZÁKAZNÍCKA ZÓNA <br>Prihlaseny uzivatel : <?php echo htmlspecialchars($_SESSION["username"]); ?></h2>
+  <h2 class="heading2" style="color: #000;">ZÁKAZNÍCKA ZÓNA<br>Prihlásený uživateľ: <br> <?php echo htmlspecialchars($_SESSION["email"]); ?></h2>
   <div class="container-fluid" id="first">
     <div class="row">
       <div class="col-lg-4 mw-100">

@@ -15,6 +15,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="admin.css">
     <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/90e4bc8c6b.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css"
@@ -26,7 +27,6 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 <nav id="menu" class="navbar navbar-expand-xs bg-white navbar-light navbar-custom fixed-top">
     <a class="navbar-brand" href="#">
       <h2>Admin zóna</h2>
-      <p class="text-danger">Prihlásený admin : <?php echo htmlspecialchars($_SESSION["username"]); ?></p>
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
       <span class="navbar-toggler-icon"></span>
@@ -41,6 +41,9 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         </li>
         <li class="nav-item">
           <a class="nav-link" href="dashboard.php?id=welcome">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="dashboard.php?id=kurzy">Pridanie kurzov</a>
         </li>
         <li class="nav-item" id="fero">
           <a class="nav-link" href="dashboard.php?id=fotog">Pridanie fotiek</a>
@@ -78,6 +81,11 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                     case "registracie":
                     include "registracie.php";
                     break;
+
+                    case "kurzy":
+                    include "kurzy.php";
+                    break;
+  
 
                     case "tvorba":
                     include "tvorba_rozvrhu.php";

@@ -36,7 +36,7 @@
 <form action="#" method="POST">
     <div class="form-group">
         <label for="date">Dátum</label>
-        <input type="text" class="form-control" name="date" id="date" placeholder="zadajte dátum kurzu v tvare napr. 2019-08-12" required>
+        <input type="text" class="form-control" name="date" id="date" placeholder="zadajte dátum kurzu v tvare napr. Pondelok 03/02/2020" required>
     </div>
 
     <div class="form-group">

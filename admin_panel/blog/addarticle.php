@@ -25,7 +25,7 @@ try {
         $stmt = $conn->prepare($sql);
         $stmt->bind_param("ssss", $_POST['nadpis'], $_POST['editor'], $_POST['datum'], $_POST['autor'],);
         $stmt->execute();
-        header("Location: admin_panel/welcome.php");
+        header("Location: ../dashboard.php");
         $stmt->close();
     }
 } catch (Exception $e) {

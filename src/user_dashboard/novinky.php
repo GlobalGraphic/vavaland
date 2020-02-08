@@ -17,7 +17,7 @@ if($mysqli === false) {
 }
 
 // fetch podla id v db
-$sql="SELECT * FROM rezervacie WHERE `user_id` = '".$_SESSION['username']."'";
+$sql="SELECT * FROM rezervacie WHERE `user_id` = '".$_SESSION['email']."'";
 
 $result=mysqli_query($mysqli,$sql);
 

@@ -10,18 +10,18 @@ $username_err = $password_err = $cislo_err = $date_err = $priezvisko_err = $emai
 if($_SERVER["REQUEST_METHOD"] == "POST"){
  
     // Validate username
-    if(empty(trim($_POST["username"]))){
-        $username_err = "Zadajte vaše meno";
+    if(empty(trim($_POST["email"]))){
+        $email_err = "Zadajte Váš email";
     } else{
         // Prepare a select statement
-        $sql = "SELECT id FROM users WHERE username = ?";
+        $sql = "SELECT id FROM users WHERE email = ?";
         
         if($stmt = $mysqli->prepare($sql)){
             // Bind variables to the prepared statement as parameters
-            $stmt->bind_param("s", $param_username);
+            $stmt->bind_param("s", $param_email);
             
             // Set parameters
-            $param_username = trim($_POST["username"]);
+            $param_email = trim($_POST["email"]);
             
             // Attempt to execute the prepared statement
             if($stmt->execute()){
@@ -29,9 +29,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 $stmt->store_result();
                 
                 if($stmt->num_rows == 1){
-                    $username_err = "Učet s takým meno už existuje!";
+                    $email_err = "Učet s takým emailom už existuje!";
                 } else{
-                    $username = trim($_POST["username"]);
+                    $email = trim($_POST["email"]);
                 }
             } else{
                 echo "Oops! Something went wrong. Please try again later.";
@@ -57,10 +57,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }
 
     // Validate email
-    if(empty(trim($_POST["email"]))){
-        $email_err = "Prosim zadajte váš email";     
+    if(empty(trim($_POST["username"]))){
+        $username_err = "Prosim zadajte váš email";     
     }else{
-        $email = trim($_POST["email"]);
+        $username = trim($_POST["username"]);
     }
     
     // Validate password
@@ -83,7 +83,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }
     
     // Check input errors before inserting in database
-    if(empty($username_err) && empty($password_err) && empty($date_err) && empty($cislo_err) && empty($adresa_err) && empty($email_err) && empty($priezvisko_err)  && empty($confirm_password_err)){
+    if(empty($username_err) && empty($password_err) && empty($date_err) && empty($cislo_err) &&  empty($email_err) && empty($priezvisko_err)  && empty($confirm_password_err)){
         
         // Prepare an insert statement
         $sql = "INSERT INTO users (username, priezvisko, email, cislo, password) VALUES (?, ?, ?, ?, ?)";

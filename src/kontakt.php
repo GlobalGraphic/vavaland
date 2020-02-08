@@ -59,13 +59,16 @@ include_once "phpmailer/SMTP.php";*/
     <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="../../index.html">Domov</a>
+          <a class="nav-link" href="../../index.php">Domov</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="rozvrh.html">Rozvrh</a>
         </li>
         <li class="nav-item" id="fero">
-          <a class="nav-link" href="dospely.html">Pre dospelých</a>
+          <a class="nav-link" href="dospely.php">Pre dospelých</a>
+        </li>
+        <li class="nav-item" id="fero">
+          <a class="nav-link" href="admin_panel/blog/blog.php">Blog</a>
         </li>
         <li class="nav-item" id="fero">
           <a class="nav-link" href="hala_miestnosti.html">Hala a miestnosti</a>

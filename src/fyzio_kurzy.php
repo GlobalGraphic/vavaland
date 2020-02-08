@@ -28,13 +28,16 @@
         <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="../index.html">Domov</a>
+              <a class="nav-link" href="../index.php">Domov</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="rozvrh.html">Rozvrh</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="dospely.html">Pre dospelých</a>
+              <a class="nav-link" href="dospely.php">Pre dospelých</a>
+            </li>
+            <li class="nav-item" id="fero">
+              <a class="nav-link" href="admin_panel/blog/blog.php">Blog</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="hala_miestnosti.html">Hala a miestnosti</a>
@@ -55,7 +58,7 @@
 
       <div class="container">
         <h2 class="kurz1">Fyzio kurzy</h2>
-        <p class="text-danger">Pre rezerváciu na daný kury je potrebné sa registrovať do uživateľskéj zóný <a href="https://www.vavaland.sk/src/registracia.php">tu</a> a následne po prihlásení v časti rozvrh v ľavom menu si rezervujete vaše miesto na kurz.</p>
+        <p class="text-danger">Pre rezerváciu na daný kury je potrebné sa registrovať do uživateľskéj zóni <a href="https://www.vavaland.sk/src/registracia.php">tu</a> a následne po prihlásení v časti rozvrh v ľavom menu si rezervujete vaše miesto na kurz.</p>
         <p class="p_hd">V detstve sa vytvárajú základné kamene motoriky, ktoré bude dieťa, neskôr dospelý používať po celý svoj život. Preto je dôležité tieto základy postaviť čo najlepšie a najpevnejšie. V dnešnej dobe môžeme u veľa detí vidieť odchýlky od správneho držania tela (ploché nohy, chabé držanie tela, chybné postavenie panvy atď). Cieleným cvičením je možné tieto odchýlky korigovať a ovplyvniť tak správny vývoj kostry a svalovej sústavy. </p>
         <p class="p_hd">Vo VAVAlande ponúkame individuálnu fyzioterapiu ale aj skupinové cvičenia na podporu obratnosti detí. Cvičenie prebieha vždy v malej skupinke 5-12 detí (podľa druhu kurzu a podľa stanovenej diagnózy). Fyzioterapeut dbá na správne postavenie tela každého dieťaťa a koriguje správnosť prevedeného pohybu.  Na vaše detí čaká moderne vybavená miestnosť/telocvičňa, šatne a sprchy. </p>
 
@@ -68,7 +71,45 @@
 
           <h2 class="kurz_hd">Cvičenie pre deti a mládež – zdravý chrbát (skolióza)</h2>
           <p class="p_hd">Cvičenia sú vhodné pre deti od 6 do 14 rokov a sú zamerané na: uvoľňovanie skrátených svalov, šije, pliec, chrbta a končatín, posilňovanie svalstva lopatiek, chrbta a trupu, nácvik správneho držania tela, správneho dýchania, polohovanie chrbtice a cvičenia svalovej koordinácie, stability. Cvičenia sú vedené certifikovaným terapeutom a cvičí sa maximálne 7 detí v skupine. Cvičenie sa realizuje vo forme kurzu – 6 lekcií.</p>
-    </div>
+    
+          <?php
+                define('DB_SERVER', 'mysql80.websupport.sk:3314');
+                define('DB_USERNAME', 'l2mlyiv5');
+                define('DB_PASSWORD', 'Nn4&,~TpYt');
+                define('DB_NAME', 'l2mlyiv5');
+        
+                // pokusenie sa spojit s mysql DB
+        
+                $conn = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
+        
+                // kontrola pripojenia
+        
+                if($conn->connect_error) {
+                    die('ERROR: Nieje mozne sa spojit s DB'.  $conn->connect_error);
+                }
+
+                $sql = "SELECT * FROM fyzio";
+
+                $result=mysqli_query($conn,$sql);
+
+                // Associative array
+                while ($row = mysqli_fetch_array($result,MYSQLI_ASSOC)) {
+                    $nadpis = $row['nadpis'];
+                    $content = $row['content'];
+                ?>
+                
+              <h2 class="kurz_hd"><?php echo $nadpis?></h2>
+              <p class="p_hd"><?php echo $content?></a></p>
+
+            <?php 
+            } 
+              mysqli_free_result($result);
+              mysqli_close($conn);
+            ?> 
+
+
+
+        </div>
 
       <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
