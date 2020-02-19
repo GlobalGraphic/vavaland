@@ -57,7 +57,7 @@
 
       <div class="container">
         <h2 class="kurz1">Pre dospelých</h2>
-        <p class="text-danger">Pre rezerváciu na daný kury je potrebné sa registrovať do uživateľskéj zóni <a href="https://www.vavaland.sk/src/registracia.php">tu</a> a následne po prihlásení v časti rozvrh v ľavom menu si rezervujete vaše miesto na kurz.</p>
+        <p class="text-success">Pre rezerváciu na daný kury je potrebné sa registrovať do uživateľskéj zóny <a href="https://www.vavaland.sk/src/registracia.php">tu</a> a následne po prihlásení v časti rozvrh v ľavom menu si rezervujete vaše miesto na kurz.</p>
           
           <h2 class="kurz_hd">SOM® tréning</h2>
           <p class="p_hd">predstavuje cvičenie, ktoré naše telo aj myseľ udržuje v dobrej kondícii. Nájdete v ňom kardio ale aj rysovacie a redukčné prvky, vďaka ktorým sa zbavíte tukových zásob. Vyrysujete sa a zároveň získate zdravé sebavedomie a kondíciu. Počas SOM tréningu cvičíte v skupine a každá hodina sa zameriava na iné partie a inú oblasť. Silové tréningy sa striedajú s intervalovými a dopĺňajú sa kardiom. V kombinácii s hudbou si na našich tréningoch nájde každý to svoje a odchádza plný energie a dobrej nálady.<br><a href="https://www.somtrening.sk/som-trening">somtrening.sk</a></p>
@@ -75,7 +75,7 @@
           <p class="p_hd">Kruhový tréning sa vykonáva na určitom počte stanovíšť vo vyššom tempe bez prestávky. Prestávka prichádza až po absolvovaní všetkých stanovíšť. Cvičíme s nasledovným náradím:  činky, kettlebelly, fitlopty, medicinbaly a samozrejme s vlastným telom. Tréning začíname dostatočným zahriatím tela a dynamickým strečingom. Po tréningu nasleduje statický strečing.</p>
 
           <h2 class="kurz_hd">ASHTANGA Yoga pre začiatočníkov</h2>
-          <p class="p_hd">Aštanga jóga je tradičný systém cvičenia pochádzajúci z Indie. Jedná sa o dynamickou formu jógy prepojujúcu jednotlivé pozície s dychom, prostredníctvom ktorého človek nadobúda vedomie vlastného tela a mysli. Jednotlivé ásany sú prepojené vinyásou – pohybom, ktorý v spojení so špeciálnym spôsobom dýchania pomáha udržovať telo zohriate a pomáha cvičiť intenzívnejšie. Cvičenie je náročnejšie, ale zvládnuteľné pre kohokoľvek, kto má záujem poznať svoje telo a myseľ. Na lekciách pre začiatočníkov bude pozornosť venovaná správnemu prevedeniu základných cvikov a na konci lekcie bude čas venovaný meditácii a odpočinku.</p>
+          <p class="p_hd">Aštanga jóga je tradičný systém cvičenia pochádzajúci z Indie. Jedná sa o dynamickou formu jógy prepojujúcu jednotlivé pozície s dychom, prostredníctvom ktorého človek nadobúda vedomie vlastného tela a mysli. Jednotlivé aśany sú prepojené vinyásou – pohybom, ktorý v spojení so špeciálnym spôsobom dýchania pomáha udržovať telo zohriate a pomáha cvičiť intenzívnejšie. Cvičenie je náročnejšie, ale zvládnuteľné pre kohokoľvek, kto má záujem poznať svoje telo a myseľ. Na lekciách pre začiatočníkov bude pozornosť venovaná správnemu prevedeniu základných cvikov a na konci lekcie bude čas venovaný meditácii a odpočinku.</p>
             
 
           <?php

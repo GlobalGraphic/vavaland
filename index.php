@@ -43,8 +43,9 @@ if(isset($_POST['news_btn'])){
 <link rel="icon" href="assets/logo.png" type="image/gif" sizes="16x16">
 <link rel="canonical" href="https://www.vavaland.sk">
 <meta name="google-site-verification" content="KPMjwhZqAkaGH3tY3BBZtTgNqHWl7FeTQfv5q8u9BjI" />
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=1">
+  <!--<link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">-->
+  <link href="https://fonts.googleapis.com/css?family=Caveat+Brush&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/90e4bc8c6b.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css"
     integrity="sha384-SI27wrMjH3ZZ89r4o+fGIJtnzkAnFs3E4qz9DIYioCQ5l9Rd/7UAa8DHcaL8jkWt" crossorigin="anonymous">
@@ -52,8 +53,8 @@ if(isset($_POST['news_btn'])){
   <script>
 
     function popup() {
-      var modal = document.getElementById("myModal");
-                        modal.style.display = "block";
+            var modal = document.getElementById("myModal");
+                              modal.style.display = "block";
 
 						// Get the <span> element that closes the modal
 						var span = document.getElementsByClassName("close")[0];
@@ -156,8 +157,8 @@ if(isset($_POST['news_btn'])){
     <span class="close">&times;</span>
   </div>
   <div class="modal-body">
-    <h2 class="center">Prihlasovanie na kurzy otvorené !!!</h2>
-    <a class="text-center" href="src/rozvrh.html">Rozvrh aktuálnych kurzov nájdeš tu</a>
+    <h2 class="center">Týždeň cvičenia zdarma !!!</h2>
+    <a class="text-center" href="src/rozvrh.html">Rozvrh aktuálnych cvičení nájdeš tu</a>
     <p class="center">Ďakujeme<br>Tím Vavaland</p>
   </div>
   <div class="modal-footer">
@@ -202,11 +203,10 @@ if(isset($_POST['news_btn'])){
         </li>
       </ul>
     </div>
-  </nav><br><br><br><br><br><br>
+  </nav><br><br><br><br><br><br><br><br>
 
   <div class="container text-center">
-      <h1 id="head">Vavaland</h1>
-      <p id="head2">vitajte v modernej športovo-vzdelávacej krajine ktorá sídli v mestskej časti Ružinov.  Ponúkame obrovskú a fantastickú škálu športových a voľnočasových aktivít pre batoľatá, deti,
+      <p id="head2">Vitajte v modernej športovo-vzdelávacej krajine ktorá sídli v mestskej časti Ružinov.  Ponúkame obrovskú a fantastickú škálu športových a voľnočasových aktivít pre batoľatá, deti,
      mladých ľudí a rodiny. Ponúkame veľké množstvo aktivít vrátane cvičenia v telocvični pre deti a dospelých, narodeninových osláv, športových, 
     umeleckých a hobby krúžkov, vzdelávacích aktivít alebo len tak príjemné posedenie pri kávičke. </p><br><br><br>
   </div>
@@ -244,23 +244,16 @@ if(isset($_POST['news_btn'])){
   <div class="container-fluid" id="first">
     <div class="row">
       <div class="col-lg-4 mw-100 first">
-        <p class="text-bold" style="color: #1772CC;">Deň otvorených dverí</p>
-        <p>Pozývame Vás na deň otvorených dverí, ktorý sa bude konať v nedeľu 08.03.2020 v priestoroch
-VAVAlandu na Hraničnej ulici 24 od 14:00 hod do 18:00 hod. Môžete si pozrieť naše priestory,
-porozprávať sa s lektormi a trénermi a pre Vaše deti je pripravený program v telocvični.</p>
+        <p class="text-bold" style="color: #1772CC;">Týždeň  cvičenia ZDARMA !!!</p>
+        <p style="font-family: 'Caveat Brush', cursive;">Navštívte nás počas 09.03.2020 - 13.03.2020 a hociktoré cvičenie alebo kurz máte u nás úplne zdarma! Svoje miesto si však musíte rezervovať cez rezervačný systém. Príďte si posedieť pri kávičke a Vaše dieťa môže vyskúšať parkour, pohybovú prípravu, angličtinu alebo špeciálne fyzio kurzy. A takisto aj VY! Tešíme sa na Vás !!!</p>
       </div>
       <div class="col-lg-4 mw-100 second">
-      <p class="text-bold" style="color: #1772CC;">Montessori dielničky</p>
-      <p>Pripravili sme pre Vás priestor, kde spoločne s Vaším dieťaťom prežijete príjemné inšpiratívne chvíle.
-Kúzelné montessori dielničky prebiehajú v  triedach s Montessori pomôckami a vhodnými materiálmi,
-ktoré sú Vašim deťom plne k dispozícii. Neoddeliteľnou súčasťou tohto prostredia je aj dospelý
-(rodič, prarodič, opatrovník), ktorý sa k dieťaťu chová s rešpektom a úctou, ale zároveň je pre dieťa
-modelom, vzorom a skúseným sprievodcom. V priebehu dielničiek máte čas venovať sa jeden
-druhému. Na dielničky sa môžete prihlásiť prostredníctvom formulára pri popise kurzu.</p>
+      <p class="text-bold" style="color: #1772CC;">Kruhový tréning</p>
+      <p style="font-family: 'Caveat Brush', cursive;">Si ranné vtáča? Chceš prísť do práce plný energie a pozitivizmu? Tak potom určite vieš aké blahodárne účinky má ranné cvičenie na organizmus. Príď k nám vyskúšať ranný kruhový tréning a rozprúdiť tak endorfíny do tela. Tešíme sa na teba !</p>
       </div>
       <div class="col-lg-4 mw-100 third">
       <p class="text-bold" style="color: #1772CC;">Montessori dielničky</p>
-      <p>Pripravili sme pre Vás priestor, kde spoločne s Vaším dieťaťom prežijete príjemné inšpiratívne chvíle.
+      <p style="font-family: 'Caveat Brush', cursive;">Pripravili sme pre Vás priestor, kde spoločne s Vaším dieťaťom prežijete príjemné inšpiratívne chvíle.
 Kúzelné montessori dielničky prebiehajú v  triedach s Montessori pomôckami a vhodnými materiálmi,
 ktoré sú Vašim deťom plne k dispozícii. Neoddeliteľnou súčasťou tohto prostredia je aj dospelý
 (rodič, prarodič, opatrovník), ktorý sa k dieťaťu chová s rešpektom a úctou, ale zároveň je pre dieťa
@@ -291,21 +284,33 @@ druhému. Na dielničky sa môžete prihlásiť prostredníctvom formulára pri 
       </div>
       <div class="col-lg-6 mw-100" style="border: none;">
         <div class="row">
-          <div class="col-xs-12 col-sm-12 col-md-4">
-            <p class="text-bold1">Nadpis hodnotenia</p>
-            <p class="sample-text">Lorem ipsum dolor sit amet, consectetur adiscing elit, sed do</p>
-            <a href="#" class="aktuality_link">Viac ></a>
+          <?php 
+          require_once "config.php";
+
+          // fetch podla id v db
+          $sql="SELECT * FROM hodnotenie ORDER BY RAND() LIMIT 1";
+
+          $result=mysqli_query($mysqli,$sql);
+
+          // Associative array
+          while ($row = mysqli_fetch_array($result,MYSQLI_ASSOC)) {
+              $poradie = $row["id"];
+              $nadpis = $row["nadpis"];
+              $text = $row['text'];
+              $meno = $row['meno'];
+              $body = $row['body'];
+          ?>
+          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-7">
+            <p class="text-bold1" style="color: #1772CC;"><?php echo $nadpis ?></p>
+            <p class="sample-text" style="font-size: 18px;"><?php echo $text ?></p>
+            <p class="sample-text" style="font-size: 18px;"><?php echo $meno ?></p>
+            <p class="sample-text" style="font-size: 18px;">Bodovanie:&nbsp;&nbsp;<?php echo $body ?></p>
           </div>
-          <div class="col-xs-12 col-sm-12 col-md-4">
-            <p class="text-bold1">Nadpis hodnotenia</p>
-            <p class="sample-text">Lorem ipsum dolor sit amet, consectetur adiscing elit, sed do</p>
-            <a href="#" class="aktuality_link">Viac ></a>
-          </div>
-          <div class="col-xs-12 col-sm-12 col-md-4">
-            <p class="text-bold1">Nadpis hodnotenia</p>
-            <p class="sample-text">Lorem ipsum dolor sit amet, consectetur adiscing elit, sed do</p>
-            <a href="#" class="aktuality_link">Viac ></a>
-          </div>
+          <?php 
+} 
+            mysqli_free_result($result);
+            mysqli_close($mysqli);
+          ?> 
         </div>
       </div>
     </div>
@@ -336,7 +341,7 @@ druhému. Na dielničky sa môžete prihlásiť prostredníctvom formulára pri 
         <div class="col-md-3 mx-auto">
 
 
-          <h5 class="font-weight-bold mt-3 mb-4">Kontaktné informácie</h5>
+          <h5 class="font-weight-bold mt-3 mb-4" style="color: #64CC27;">Kontaktné informácie</h5>
 
           <ul class="list-unstyled">
             <li>
@@ -363,7 +368,7 @@ druhému. Na dielničky sa môžete prihlásiť prostredníctvom formulára pri 
         <div class="col-md-3 mx-auto">
 
 
-          <h5 class="font-weight-bold mt-3 mb-4">Navigácia</h5>
+          <h5 class="font-weight-bold mt-3 mb-4" style="color: #64CC27;">Navigácia</h5>
 
           <ul class="list-unstyled">
             <li>
@@ -396,7 +401,7 @@ druhému. Na dielničky sa môžete prihlásiť prostredníctvom formulára pri 
         <div class="col-md-3 mx-auto">
 
 
-          <h5 class="font-weight-bold  mt-3 mb-4">Sociálne siete</h5>
+          <h5 class="font-weight-bold  mt-3 mb-4" style="color: #64CC27;">Sociálne siete</h5>
 
           <ul class="list-unstyled">
             <li>
@@ -416,7 +421,7 @@ druhému. Na dielničky sa môžete prihlásiť prostredníctvom formulára pri 
         <div class="col-md-3 mx-auto">
 
 
-          <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Informácie</h5>
+          <h5 class="font-weight-bold text-uppercase mt-3 mb-4" style="color: #64CC27;">Informácie</h5>
 
           <ul class="list-unstyled">
             <li>

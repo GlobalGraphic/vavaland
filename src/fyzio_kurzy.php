@@ -58,7 +58,7 @@
 
       <div class="container">
         <h2 class="kurz1">Fyzio kurzy</h2>
-        <p class="text-danger">Pre rezerváciu na daný kury je potrebné sa registrovať do uživateľskéj zóni <a href="https://www.vavaland.sk/src/registracia.php">tu</a> a následne po prihlásení v časti rozvrh v ľavom menu si rezervujete vaše miesto na kurz.</p>
+        <p class="text-success">Pre rezerváciu na daný kury je potrebné sa registrovať do uživateľskéj zóny <a href="https://www.vavaland.sk/src/registracia.php">tu</a> a následne po prihlásení v časti rozvrh v ľavom menu si rezervujete vaše miesto na kurz.</p>
         <p class="p_hd">V detstve sa vytvárajú základné kamene motoriky, ktoré bude dieťa, neskôr dospelý používať po celý svoj život. Preto je dôležité tieto základy postaviť čo najlepšie a najpevnejšie. V dnešnej dobe môžeme u veľa detí vidieť odchýlky od správneho držania tela (ploché nohy, chabé držanie tela, chybné postavenie panvy atď). Cieleným cvičením je možné tieto odchýlky korigovať a ovplyvniť tak správny vývoj kostry a svalovej sústavy. </p>
         <p class="p_hd">Vo VAVAlande ponúkame individuálnu fyzioterapiu ale aj skupinové cvičenia na podporu obratnosti detí. Cvičenie prebieha vždy v malej skupinke 5-12 detí (podľa druhu kurzu a podľa stanovenej diagnózy). Fyzioterapeut dbá na správne postavenie tela každého dieťaťa a koriguje správnosť prevedeného pohybu.  Na vaše detí čaká moderne vybavená miestnosť/telocvičňa, šatne a sprchy. </p>
 

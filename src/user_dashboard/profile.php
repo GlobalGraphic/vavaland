@@ -40,7 +40,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
           <a class="nav-link" href="../../src/rozvrh.html">Rozvrh</a>
         </li>
         <li class="nav-item" id="fero">
-          <a class="nav-link" href="../../src/dospely.html">Pre dospelých</a>
+          <a class="nav-link" href="../../src/dospely.php">Pre dospelých</a>
         </li>
         <li class="nav-item" id="fero">
           <a class="nav-link" href="admin_panel/blog/blog.php">Blog</a>
@@ -82,6 +82,9 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                        <i class="fas fa-credit-card"></i><a href="profile.php?id=kredit" class="sub">Kredit</a>
                       </li>
                       <li class="sub_menu">
+                        <i class="fas fa-poll-h"></i><a href="profile.php?id=hodnotenie" class="sub">Hodnotenie</a>
+                      </li>
+                      <li class="sub_menu">
                       <i class="fas fa-glass-cheers"></i><a href="profile.php?id=oslavy" class="sub">Oslavy/Tábory/Miestnosti</a>
                       </li>
                       <li class="sub_menu">
@@ -105,6 +108,10 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
                 case "novinky":
                 include "novinky.php";
+                break;
+
+                case "hodnotenie":
+                include "hodnotenie.php";
                 break;
 
                 case "kredit":

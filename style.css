@@ -13,7 +13,7 @@
 
 section#newsletter {
     background-color: #64CC27;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Caveat Brush', cursive;
 }
 
 input#news_btn {
@@ -23,13 +23,13 @@ input#news_btn {
 
 h1#head {
     color: #64CC27;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Caveat Brush', cursive;
     margin-bottom: 45px;
 }
 
 p#head2 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 18px;
+    font-family: 'Caveat Brush', cursive;
+    font-size: 24px;
     margin-bottom: 65px;
     color: #1f2f8b;
 }
@@ -60,12 +60,12 @@ p.head_para {
 }
 
 img.logo {
-    width: 150px;
+    width: 100px;
 }
 
 body#body {
-    background-color: #eeeeee;
-}
+    background-color: #EEFCFC
+} 
 
 ::-webkit-scrollbar {
 	display: none;
@@ -73,7 +73,7 @@ body#body {
 
 
 a.nav-link {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Caveat Brush', cursive;
     padding: 25px;
 }
 
@@ -106,14 +106,14 @@ div.col-lg-4.mw-100.first {
     position: relative;
 }
 
-div.col-lg-4.mw-100.first:after {
+ div.col-lg-4.mw-100.first:after {
     content: '';
 	position: absolute;
 	bottom: 0px;
 	right: 0;
 	width: 25%;
 	border-bottom: 3px solid #64CC27;
-}
+} 
 
 div.col-lg-4.mw-100.second {
     position: relative;
@@ -153,7 +153,7 @@ li.sub_menu:hover {
 }
 
 a.sub {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Caveat Brush', cursive;
     font-size: 18px;
     color: #1f2f8b;
 }
@@ -193,8 +193,13 @@ a.sub {
     margin-right: 20px;
 }
 
+.fa-poll-h {
+    color: #1f2f8b;
+    margin-right: 20px;
+}
+
 p.infor {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Caveat Brush', cursive;
     font-size: 18px;
 }
 
@@ -212,12 +217,12 @@ img.logo {
 
 h1.heading {
     margin-left: 75px;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Caveat Brush', cursive;
     font-size: 20px;
 }
 
 p.headings {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Caveat Brush', cursive;
     font-size: 25px;
     font-weight: bold;
 }
@@ -236,7 +241,7 @@ div.col-lg-4 {
 div.col-lg-5 {
     padding: 35px;
     background-color: #64CC27;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Caveat Brush', cursive;
     text-align: center;
     margin: 15px;
     color: #fff;
@@ -244,7 +249,7 @@ div.col-lg-5 {
 }
 
 p.p_hd {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Caveat Brush', cursive;
     margin-bottom: 40px;
 }
 
@@ -253,14 +258,16 @@ ul#list {
 }
 
 h2.kurz1 {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Caveat Brush', cursive;
     margin-bottom: 25px;
+    color: #64CC27;
 }
 
 h2.kurz_hd {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Caveat Brush', cursive;
     margin-bottom: 25px;
-    font-size: 25px;
+    font-size: 24px;
+    color: #64CC27;
 }
 
 div.col-lg-8 {
@@ -276,7 +283,7 @@ img.img-fluid {
 
 a.program-links {
     color: white;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Caveat Brush', cursive;
     text-transform: uppercase;
     font-weight: bold;
     font-size: 12px;
@@ -300,25 +307,25 @@ img.ccc {
 
 article{
     margin-top: -10px;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Caveat Brush', cursive;
     color: #666;
 }
 
 p.program {
     margin-top: -15px;
     font-weight: bold;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Caveat Brush', cursive;
 }
 
 button.program_btn {
     margin-top: 20px;
     border-radius: 15px;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Caveat Brush', cursive;
 }
 
 h2.heading2 {
     margin-left: 75px;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Caveat Brush', cursive;
     font-size: 20px;
 }
 
@@ -335,7 +342,7 @@ h2.heading3 {
 }
 
 p.text-bold {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Caveat Brush', cursive;
     font-weight: bold;
 }
 
@@ -372,7 +379,7 @@ div.col-lg-6 {
 }
 
 p.text-bold1 {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Caveat Brush', cursive;
     font-weight: bold;
     padding-top: 60px;
     padding-bottom: 20px;
@@ -380,7 +387,7 @@ p.text-bold1 {
 }
 
 a.aktuality {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Caveat Brush', cursive;
     color: #1f2f8b;
     text-transform: uppercase;
     font-weight: bold;
@@ -388,7 +395,7 @@ a.aktuality {
 }
 
 a.aktuality_link {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Caveat Brush', cursive;
     margin-left: 20px;
     color: #1f2f8b;
     text-transform: uppercase;
@@ -397,7 +404,7 @@ a.aktuality_link {
 }
 
 p.sample-text{
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Caveat Brush', cursive;
     margin-left: 20px;
     color: #999;
     font-size: 12px;
@@ -451,7 +458,7 @@ div.grey {
 }
 
 a.black_a {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Caveat Brush', cursive;
     font-weight: bold;
     margin-left: 10px;
     margin-top: 15px;
@@ -463,7 +470,7 @@ a.black_a:hover {
 }
 
 a.white_a {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Caveat Brush', cursive;
     font-weight: bold;
     margin-left: 10px;
     margin-top: 15px;
@@ -480,12 +487,12 @@ img.isic {
 }
 
 .bolded {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Caveat Brush', cursive;
     font-weight: bold;
 }
 
 .wrapped {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Caveat Brush', cursive;
     font-weight: 400;
 }
 
@@ -495,15 +502,15 @@ img.isic {
 }
 
 h5 {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Caveat Brush', cursive;
 }
 
 .list-unstyled {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Caveat Brush', cursive;
 }
 
 a.footer-links {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Caveat Brush', cursive;
     color: #273790;
 }
 
@@ -529,7 +536,7 @@ a.footer-links {
 
 table#first_left tr td {
     box-shadow: 2px 2px 6px 2px rgba(218, 223, 225, 1), 2px 2px 8px 2px rgba(218, 223, 225, 1);
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Caveat Brush', cursive;
 }
 
 hr.line {
@@ -539,20 +546,20 @@ hr.line {
 }
 
 h2.info_heading {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Caveat Brush', cursive;
     font-size: 23px;
     font-weight: bold;
     margin-bottom: 50px;
 }
 
 p.info_text {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Caveat Brush', cursive;
     color: #d0d0d0;
     margin-bottom: 25px;
 }
 
 h3.heading_tri {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Caveat Brush', cursive;
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 45px;
@@ -563,7 +570,7 @@ h3.heading_tri {
     width: 120px;
     border-radius: 15px;
     text-transform: uppercase;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Caveat Brush', cursive;
     font-weight: bold;
     font-size: 14px;
 }
@@ -573,11 +580,11 @@ h3.heading_tri {
 }
 
 h5.font-weight-bold.mt-3.mb-4 {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Caveat Brush', cursive;
 }
 
 li.greyed {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Caveat Brush', cursive;
     color: #d0d0d0;
 }
 
@@ -597,7 +604,7 @@ div#max{
 }
 
 p.info_heading {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Caveat Brush', cursive;
     font-size: 16px;
     font-weight: bold;
     position: relative;
@@ -605,7 +612,7 @@ p.info_heading {
 }
 
 p.program1 {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Caveat Brush', cursive;
     font-size: 12px;
     position: relative;
     top: 25px;
@@ -676,7 +683,7 @@ i.fas.fa-file-word {
 #sel1 {
     width: 35%;
     background-color: #f0f0f0;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Caveat Brush', cursive;
 }
 
 .tab {
@@ -684,7 +691,7 @@ i.fas.fa-file-word {
 }
 
 h2.zakon {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Caveat Brush', cursive;
     font-size: 30px;
     margin-bottom: 40px;
 }

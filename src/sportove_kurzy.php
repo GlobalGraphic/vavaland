@@ -9,7 +9,7 @@
     <meta name="keywords" content="športove kurzy, fyzio kurzy, doučovanie, jazykové kurzy, deti, Tvorivá zábava, športové Aktivity">
     <meta name="author" content="Global Graphic & Design">
     <link rel="icon" href="../assets/logo.png" type="image/gif" sizes="16x16">
-    <link rel="stylesheet" href="../style.css?v=2">
+    <link rel="stylesheet" href="../style.css?v=1">
     <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/90e4bc8c6b.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css"
@@ -60,7 +60,7 @@
 
       <div class="container">
           <h2 class="kurz1">Športové kurzy</h2>
-          <p class="text-danger">Pre rezerváciu na daný kury je potrebné sa registrovať do uživateľskéj zóni <a href="https://www.vavaland.sk/src/registracia.php">tu</a> a následne po prihlásení v časti rozvrh v ľavom menu si rezervujete vaše miesto na kurz. Výnimka sa vzťahuje na <b>Športové kurzy pre 4 – 7 rokov</b> a <b>Športové kurzy pre 7 – 12 rokov</b> na nich sa prihlásite pomocou formulára pri popise kurzu.</p>
+          <p class="text-success">Pre rezerváciu jednorázového vstupu sa musíš prihlásiť a rezervovať si miesto.Ak ešte nemáš účet, zaregistruj sa kliknutím <a href="registracia.php">tu</a>. Pri kurzoch (kurz sa platí vopred a trvá určitý počet lekcií) je potrebné sa objednať pomocou formulára ktorý nájdeš <a href="prihl.php">tu</a> kde zadáš všetky potrebné údaje. Po výpočte ceny kurzovného ti bude zaslaný mail s potvrdením rezervácie miesta na kurz a údajmi pre zaplatenie kurzovného. V rámci rezervačného rozvrhu kurzy neuvidíš, nebudeš sa môcť na ne prihlásiť, miesto v kurze ti bude potvrdené emailom.</p>
           <p class="p_hd">Pre svoje deti u nás nájdete pestrú ponuku kurzov od pomalších ako je kompenzačné cvičenie pre
             deti až po dynamické typy kurzov ako napríklad silovo-koordinačný tréning. Každý kurz z našej
             ponuky je trochu inak zameraný, ale všetky majú spoločné:</p>
@@ -77,21 +77,20 @@
                     trávenia voľného času, preto im pripravujeme vhodné príležitosti a snažíme sa ich nadchnúť</li>
             </ul>
 
-            <h2 class="kurz_hd">Športové kurzy pre 4 – 7 rokov  </h2>
+            <h2 class="kurz_hd">Všeobecná pohybová príprava JUNIOR 4-7 rokov</h2>
             <p class="p_hd">Na týchto kurzoch sa zameriavame hlavne na rozvoj hrubých pohybových schopností pozitívnym, zábavným a pútavým spôsobom. Program zahŕňa zahrievanie, strečing; skákanie, beh a základné športové zručnosti (napr. ovládanie lopty). Deti sa zabavia a  spoznajú nových priateľov. Zameriavame sa aj na tímovú prácu a dobré športové vyžitie, rozvíjanie atletických schopností a budovanie sebavedomia. Tento kurz pomôže deťom vybudovať koordináciu, motorické zručnosti a celoživotnú lásku k športe. Dĺžka cvičenia je 50 minút a cvičí sa maximálne 15-20 detí v skupine. <a href="https://vavaland.sk/src/prihl.php">Prihlásiť sa môžete tu:</a></p>
 
             <h2 class="kurz_hd">Kondičný tréning pre mládež 12+</h2>
             <p class="p_hd">Cvičenie je vhodné pre mladých športovcov, ktorý si chú zlepšiť svoju fyzickú zdatnosť, alebo ako doplnok k ďalším športom ako je hokej, tenis, atletika, atď. Je zameraný na rozvoj sily, vytrvalosti, rýchlosti a obratnosti. Počas tréningu budeme využívať vlastnú váhu tela ale aj rôzne pomôcky - lano, bosu, kettlebell, atď. Kondičný tréning doporučujeme tým, ktorý sa už nejakému športu alebo cvičeniu venujú a chcú zvýšiť svoju fyzickú zdatnosť. .Prihlásiť sa môžete formou rezervačného sýstému.</p>
 
-            <h2 class="kurz_hd">Športové kurzy pre 7 – 12 rokov </h2>
+            <h2 class="kurz_hd">Všeobecná pohybová príprava TEEN 8-12 rokov</h2>
             <p class="p_hd">Všeobecná športová príprava pre deti je určená pre všetky deti, ktoré chcú skúsiť rôzne druhy športov a mať možnosť rozvíjať svoju všestrannosť. Zmiešaná telesná aktivita, všestrannosť a radosť z hry nad záujem vysokej výkonnosti je určená pre deti základných škôl. Základná všestrannosť môže znamenať dobrý začiatok pre neskoršiu športovú špecializáciu (napr. atletiku, hokej, futbal atď). Na hodinách sa budeme venovať základom atletiky, gymnastiky, loptovým hrám a ďalších športov. V priebehu celého roka budeme získavať kladný vzťah k aktívnemu zdraviu, kondícii ale aj k procesu rastu a vývoja. Budeme sa učiť novým zručnostiam zábavnou formou. V prípade priaznivého počasia budeme využívať aj vonkajší dvor a ihrisko. Dĺžka cvičenia je 50 minút a cvičí sa maximálne 15-20 detí v skupine.<a href="https://vavaland.sk/src/prihl.php">Prihlásiť sa môžete tu:</a></p>
 
-            <h2 class="kurz_hd">Cvičenie rodičov s deťmi  (BABY gymnastika 12-18 mes)</h2>
-            <p class="p_hd">Cvičenia prebiehajú za účasti rodiča a majú za cieľ začať rozvíjať najzákladnejšie pohybové návyky a podporiť tak koordináciu celého tela a rovnováhu. Pre deti tohto veku je pohyb nenahraditeľným spoločníkom na ceste k správnemu rozvoju pohybového aparátu. Pod vedením našich trénerov si tak môžete užiť všestranný pohybový program šitý na mieru práve Vašim najmenším. Dĺžka lekcie je 50 minút a cvičí sa maximálne 10 detí v skupine. Cvičenie sa realizuje vo forme kurzu. <a href="https://vavaland.sk/src/prihl.php">Prihlásiť sa môžete tu:</a></p>
+            <h2 class="kurz_hd">BABY gymnastika 12-18 mes</h2>
+            <p class="p_hd">Cvičenia prebiehajú za účasti rodiča a majú za cieľ začať rozvíjať najzákladnejšie pohybové návyky a podporiť tak koordináciu celého tela a rovnováhu. Pre deti tohto veku je pohyb nenahraditeľným spoločníkom na ceste k správnemu rozvoju pohybového aparátu. Pod vedením našich trénerov si tak môžete užiť všestranný pohybový program šitý na mieru práve Vašim najmenším. Dĺžka lekcie je 50 minút a cvičí sa maximálne 10 detí v skupine.  Cvičenie sa realizuje formou jednorázových vstupov, <a href="https://vavaland.sk/src/prihl.php">Prihlásiť sa môžete tu:</a></p>
 
-            <h2 class="kurz_hd">PARKOUR KIDS 6 – 8 rokov</h2><br>
-            <h2 class="kurz_hd">PARKOUR BASIC 9 – 12 rokov</h2>
-            <p class="p_hd">Odporúčaný vek je od 6 – 8 rokov. Parkour je fyzická disciplína a metóda tréningu s účelom prekonať
+            <h2 class="kurz_hd">PARKOUR KIDS 6 – 8 rokov,</h2><h2 class="kurz_hd">PARKOUR BASIC 9 – 12 rokov</h2>
+            <p class="p_hd"> Odporúčaný vek  pre PARKOUR KIDS je od 6 – 8 rokov a pre PARKOUR BASIC je 9 -12 rokov. Parkour je fyzická disciplína a metóda tréningu s účelom prekonať
               prekážky v ceste tým, že prispôsobíme svoj pohyb danému prostrediu. Parkour je charakterizovaný
               dôsledným disciplinovaným tréningom s dôrazom na praktickú silu, výdrž, rovnováhu, kreativitu,
               plynulosť, kontrolu, presnosť, priestorovú orientáciu a rozvoj netradičného vnímania priestoru a
@@ -102,13 +101,14 @@
             <h2 class="kurz_hd">Tanečno pohybová príprava pre deti 1,5 - 3 roky</h2>
 
             <h2 class="kurz1">Štruktúra vyučovacej hodiny:</h2>
-            <ul class="list-group list-group-flush" id="list">
-                <li class="list-group-item">a) rozcvička: posilňovanie tých svalových skupín, ktoré majú sklon k ochabnutosti, naopak uvoľňovanie tých, ktoré majú sklon skracovať sa, cviky proti plochým nohám, jednoduché gymnastické prvky. </li>
-                <li class="list-group-item">b) nácvik jednoduchého tanca na pesničku, hudobný doprovod, spev, jednoduché tanečné kroky v rytme a priestorovej formácii, doplnené pantomimickými prvkami. </li>
-                <li class="list-group-item">c) pohybová hra zameraná na získavanie jednotlivých tanečných schopností - rytmus, tempo, orientácia v priestore, koordinácia a výraz. </li>
-            </ul>
+
+            <p class="p_hd">
+            a) rozcvička: posilňovanie tých svalových skupín, ktoré majú sklon k ochabnutosti, naopak uvoľňovanie tých, ktoré majú sklon skracovať sa, cviky proti plochým nohám, jednoduché gymnastické prvky.<br>
+            b) nácvik jednoduchého tanca na pesničku, hudobný doprovod, spev, jednoduché tanečné kroky v rytme a priestorovej formácii, doplnené pantomimickými prvkami.<br>
+            c) pohybová hra zameraná na získavanie jednotlivých tanečných schopností - rytmus, tempo, orientácia v priestore, koordinácia a výraz.<br>
 
             <p class="p_hd">Dĺžka lekcie je 50 minút a cvičí sa maximálne 12 detí v skupine. <a href="https://vavaland.sk/src/prihl.php">Prihlásiť sa môžete tu:</a></p>
+            </p>
 
             <h2 class="kurz_hd">BALET prípravka 4-5 rokov</h2>
             <p class="p_hd">Všimli ste si, že Vaše dieťa, akonáhle započuje hudbu, začne radostne poskakovať a “baletiť” podľa

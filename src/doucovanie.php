@@ -58,18 +58,18 @@
 
       <div class="container">
         <h2 class="kurz1">Doučovanie a jazykové kurzy</h2>
-        <p class="text-danger">Pre rezerváciu na daný kury je potrebné sa registrovať do uživateľskéj zóni <a href="https://www.vavaland.sk/src/registracia.php">tu</a> a následne po prihlásení v časti rozvrh v ľavom menu si rezervujete vaše miesto na kurz.</p>
-          <p class="p_hd">Snáď každý z nás sa  niekedy potreboval doučiť nejaký školský predmet. A asi každý z nás sa stretol s celou radou problémov. U nás vo VAVAlande veríme, že každý môže dosiahnuť skvelé výsledky. Ponúkame Vám skupinové doučovanie predmetov základných škôl, ktoré zostavujeme priamo na mieru klientovi alebo skupine. Preto nás neváhajte kontaktovať so svojimi požiadavkami formou nezáväzného kontaktného formulára, ktorý nájdete tu: <a href="https://vavaland.sk/src/kontakt.php">Kontakt</a></p>
+        <p class="text-success">Pre rezerváciu na daný kury je potrebné sa registrovať do uživateľskéj zóny <a href="https://www.vavaland.sk/src/registracia.php">tu</a> a následne po prihlásení v časti rozvrh v ľavom menu si rezervujete vaše miesto na kurz.</p>
+          <p class="p_hd">Snáď každý z nás sa niekedy potreboval doučiť nejaký školský predmet alebo jazyk.  A asi každý z nás sa stretol s celou radou problémov. U nás vo VAVAlande veríme, že každý môže dosiahnuť skvelé výsledky. Ponúkame Vám skupinové doučovanie predmetov základných škôl, ktoré zostavujeme priamo na mieru klientovi alebo skupine. Zároveň Vám ponúkame jazykové kurzy pre deti a mládež, ktoré sú vedené zábavne, aby u detí vzbudili záujem o jazyk a netrápime ich bifľovaním slovíčok alebo gramatikou. Tak príďte, tešíme sa na Vás!</p>
         
-          <h2 class="kurz_hd">Angličtina pre deti od 03 – 06 rokov - škôlkári</h2>
-          <p class="p_hd">Tvorivá a zábavná angličtina pre deti. Učiť sa angličtinu je predsa oveľa ľahšie keď sa zabávate. Vieme, ako urobiť učenie angličtiny jednoduchým, účinným a zábavným prostredníctvom hier, pesničiek, kreslenia alebo ručných prác a videí. Naše malé skupinky zabezpečujú, že každé dieťa dostane pozornosť, ktorú si zaslúži, a veľa príležitostí hovoriť správne po anglicky. Kurzy prebiehajú 2x týždenne</p>
+          <h2 class="kurz_hd">BABY English (2,5 - 5 rokov)</h2>
+          <p class="p_hd">Tvorivá a zábavná angličtina pre deti. Učiť sa angličtinu je predsa oveľa ľahšie keď sa zabávate. Vieme, ako urobiť učenie angličtiny jednoduchým, účinným a zábavným prostredníctvom hier, pesničiek, kreslenia alebo ručných prác a videí. Naše malé skupinky zabezpečujú, že každé dieťa dostane pozornosť, ktorú si zaslúži, a veľa príležitostí hovoriť správne po anglicky. Kurzy prebiehajú 2x týždenne v trvaní 10 týždňov a prihlásiť sa môžete <a href="prihl.php">tu</a></p>
 
           <h2 class="kurz_hd">Angličtina pre deti prvý stupeň ZŠ – školáci </h2>
-          <p class="p_hd">Každé dieťa sa na kurzoch angličtiny bude cítiť dobre! Deti sústavne podporujeme a povzbudzujeme k tvoreniu, pohybu a hlavne k používaniu a precvičovaniu nových nadobudnutých znalostí. Naše hodiny angličtiny Vám pomôžu vychovať sebavedomého a odvážneho človek, ktorý sa nebude báť hovoriť po anglicky. Kurzy prebiehajú 2x týždenne</p>
+          <p class="p_hd">Každé dieťa sa na kurzoch angličtiny bude cítiť dobre! Deti sústavne podporujeme a povzbudzujeme k tvoreniu, pohybu a hlavne k používaniu a precvičovaniu nových nadobudnutých znalostí. Naše hodiny angličtiny Vám pomôžu vychovať sebavedomého a odvážneho človek, ktorý sa nebude báť hovoriť po anglicky.  Kurzy prebiehajú 2x týždenne v trvaní 10 týždňov a prihlásiť sa môžete <a href="prihl.php">tu</a></p>
 
-          <h2 class="kurz_hd">Angličtina pre maminky spolu s detičkami</h2>
+          <h2 class="kurz_hd">Konverzačná angličtina pre maminky spolu s detičkami</h2>
           <p class="p_hd">Cieľom je aby ste počas materskej nezabudli, čo ste sa predtým pracne naučili, alebo si oprášili pred nástupom späť do práce, čo ste už stihli zabudnúť. Počas hodín sa účastníci zameriavajú na rozprávanie a počúvanie aby si doplnili slovnú zásobu, osvojili bežné hovorové výrazy a tak podporili plynulú konverzáciu. Mamičky si môžu so sebou vziať dieťa. V miestnosti je dostatok miesta na hranie aj lozenie a tiež hračky. 
-            Vstupne na hodinu je 7,00 Eur a je potrebné si termín rezervovať cez rezervačný systém.
+          Kurzy prebiehajú 2x týždenne v trvaní 10 týždňov a prihlásiť sa môžete <a href="prihl.php">tu</a>
             </p>
 
             <h2 class="kurz_hd">Montessori dielničky zamerané na cvičenia praktického života pre deti vo veku 2-3 roky</h2>
