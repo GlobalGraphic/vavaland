@@ -9,12 +9,12 @@ const getSchedule = schedule => {
 	let html = "";
 	Object.keys(days).forEach(key => {
 		const header = `
-			<table class="table table-striped table-hover">
-			<caption>
+			<table class="table table-striped table-hover" id="example1">
+			<caption style="caption-side: top;font-weight:bold;">
 				${key}
 			</caption>
 
-			<thead>
+			<thead style="border:1px solid black;">
 				<tr>
 					<th>Čas</th>
 					<th>Kurz</th>

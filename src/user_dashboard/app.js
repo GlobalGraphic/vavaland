@@ -10,7 +10,7 @@ const getSchedule = schedule => {
 	Object.keys(days).forEach(key => {
 		const header = `
 			<table class="table table-striped table-hover">
-			<caption>
+			<caption style="caption-side: top;font-weight:bold;">
 				${key}
 			</caption>
 
@@ -37,7 +37,7 @@ const getSchedule = schedule => {
 						<i class="fa fa-unlock"></i>
 						<span data-ref="counter">${item.number}/${item.max}</span>
 					</div>
-					<button>
+					<button onClick="this.disabled=true;">
 						Rezervácia
 					</button>
 				</td>
@@ -97,7 +97,7 @@ window.addEventListener("load", async () => {
 				btn.addEventListener("click", event => {
 					const parentElement = event.target.parentElement.parentElement;
 					const item = data.find(item => item.id === parentElement.id);
-
+					
 					if(parseInt(item.number) < parseInt(item.max)) {
 						// Get the modal
 						var modal = document.getElementById("myModal");

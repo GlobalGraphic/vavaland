@@ -37,7 +37,6 @@ while ($row = mysqli_fetch_array($result,MYSQLI_ASSOC)) {
     <p class="infor"><b>Priezvisko:</b>  <?php echo $priezvisko;?></p>
     <p class="infor"><b>Email:</b>  <?php echo $email;?></p>
     <p class="infor"><b>Tel.číslo:</b>  <?php echo $cislo;?></p>
-    <p class="text-danger">* Pre zmenu kontaktných info. kontaktujte administrátora.</p>
     <a href="reset_hesla.php">Zmena hesla</a>
 </div>
 

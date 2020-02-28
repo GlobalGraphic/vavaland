@@ -14,12 +14,15 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="../../style.css?v=1">
+  <link rel="stylesheet" href="../../style.css">
   <link rel="stylesheet" href="../login_reg.css">
   <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/90e4bc8c6b.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css"
     integrity="sha384-SI27wrMjH3ZZ89r4o+fGIJtnzkAnFs3E4qz9DIYioCQ5l9Rd/7UAa8DHcaL8jkWt" crossorigin="anonymous">
+    <link href="https://db.onlinewebfonts.com/c/a7e3822358f6dcb2f986a68cf24721b2?family=MV+Boli" rel="stylesheet" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
   <title>VAVAland </title>
 </head>
 <body id="body">
@@ -34,16 +37,19 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="../../index.php">Domov</a>
+          <a class="nav-link" href="../../index.php">Úvod</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="../../src/rozvrh.html">Rozvrh</a>
         </li>
         <li class="nav-item" id="fero">
-          <a class="nav-link" href="../../src/dospely.php">Pre dospelých</a>
+          <a class="nav-link" href="../../src/dospely.php">Dospelý</a>
         </li>
         <li class="nav-item" id="fero">
-          <a class="nav-link" href="admin_panel/blog/blog.php">Blog</a>
+              <a class="nav-link" href="../../src/deti.html">Deti</a>
+            </li>
+        <li class="nav-item" id="fero">
+          <a class="nav-link" href="../../admin_panel/blog/blog.php">Blog</a>
         </li>
         <li class="nav-item" id="fero">
           <a class="nav-link" href="../../src/hala_miestnosti.html">Hala a miestnosti</a>

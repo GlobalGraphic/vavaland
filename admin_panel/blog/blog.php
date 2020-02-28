@@ -20,6 +20,8 @@
 <link rel="stylesheet" href="../../style.css">
 <script src="https://kit.fontawesome.com/90e4bc8c6b.js" crossorigin="anonymous"></script>
 <style type="text/css">body{font-family: Raleway;}</style>
+<link href="https://fonts.googleapis.com/css?family=Montserrat:600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
 <style>
   a{
     color: #2F80ED;
@@ -28,54 +30,47 @@
 </head>
 <body>
 <nav id="menu" class="navbar navbar-expand-md bg-white navbar-light navbar-custom fixed-top">
-    <a class="navbar-brand" href="index.html">
-      <img src="../../assets/logo.png" alt="logo skoly" class="logo" />
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="../../index.php">Domov</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="../../src/rozvrh.html">Rozvrh</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Aktivity pre deti
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="https://vavaland.sk/src/sportove_kurzy.html">Športové kurzy</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="https://vavaland.sk/src/fyzio_kurzy.html">FYZIO kurzy</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="https://vavaland.sk/src/doucovanie.html">Doučovanie a jazykové kurzy</a>
-          </div>
-        </li>
-        <li class="nav-item" id="fero">
-          <a class="nav-link" href="../../src/dospely.html">Pre dospelých</a>
-        </li>
-        <li class="nav-item" id="fero">
-          <a class="nav-link" href="admin_panel/blog.php">Blog</a>
-        </li>
-        <li class="nav-item" id="fero">
-          <a class="nav-link" href="../../src/hala_miestnosti.html">Hala a miestnosti</a>
-        </li>
-        <li class="nav-item" id="fero">
-          <a class="nav-link" href="../../src/oslavy.html">Oslavy a denné tábory</a>
-        </li>
-        <li class="nav-item" id="fero">
-          <a class="nav-link" href="../../src/kontakt.php">Kontakt</a>
-        </li>
-        <li class="nav-item" id="fero">
+        <a class="navbar-brand" href="../../index.php">
+          <img src="../../assets/logo.png" alt="logo skoly" class="logo"/>
+        </a>
+        <i class="fas fa-map-marker-alt"></i>
+        <p class="menu_text">Hraničná 24<br/> 821 05 Bratislava</p>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="../../index.php">Úvod</a>
+            </li>
+            <li class="nav-item" id="fero">
+              <a class="nav-link" href="../../src/dospely.php">Dospelý</a>
+            </li>
+            <li class="nav-item" id="fero">
+              <a class="nav-link" href="../../src/deti.html">Deti</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../../src/rozvrh.html">Rozvrh</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../../src/oslavy.html">Oslavy a tábory</a>
+            </li>
+            <li class="nav-item" id="fero">
+              <a class="nav-link" href="../../src/hala_miestnosti.html">Miestnosti</a>
+            </li>
+            <li class="nav-item" id="fero">
+              <a class="nav-link" href="admin_panel/blog/blog.php">Blog</a>
+            </li>
+            <li class="nav-item" id="fero">
+              <a class="nav-link" href="../../src/kontakt.php">Kontakt</a>
+            </li>
+            <li class="nav-item" id="fero">
           <a class="nav-link" href="../../src/prihlasenie.php"><i class="far fa-user"
             style="color: #1f2f8b;"></i></a>
         </li>
-      </ul>
-    </div>
-  </nav><br><br><br><br><br><br>
+          </ul>
+        </div>
+      </nav><br><br><br><br>
 
           <section id="variableBoxRight">
 
