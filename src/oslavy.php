@@ -44,7 +44,7 @@
           <a class="nav-link" href="rozvrh.html">Rozvrh</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="oslavy.html">Oslavy a tábory</a>
+          <a class="nav-link" href="oslavy.php">Oslavy a tábory</a>
         </li>
         <li class="nav-item" id="fero">
           <a class="nav-link" href="hala_miestnosti.html">Miestnosti</a>
@@ -102,6 +102,41 @@ Cena tábora na 5 dní je 135,00 Eur ak dieťa prihlásite do 31.03.2020 bude V�
           <br><br>
           Cena tábora na 5 dní je 135,00 Eur ak dieťa prihlásite do 31.03.2020 bude Vám uplatnená zľava 10%
           </p>
+
+          <?php
+                define('DB_SERVER', 'mysql80.websupport.sk:3314');
+                define('DB_USERNAME', 'l2mlyiv5');
+                define('DB_PASSWORD', 'Nn4&,~TpYt');
+                define('DB_NAME', 'l2mlyiv5');
+        
+                // pokusenie sa spojit s mysql DB
+        
+                $conn = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
+        
+                // kontrola pripojenia
+        
+                if($conn->connect_error) {
+                    die('ERROR: Nieje mozne sa spojit s DB'.  $conn->connect_error);
+                }
+
+                $sql = "SELECT * FROM tabory";
+
+                $result=mysqli_query($conn,$sql);
+
+                // Associative array
+                while ($row = mysqli_fetch_array($result,MYSQLI_ASSOC)) {
+                    $nadpis = $row['nadpis'];
+                    $content = $row['content'];
+                ?>
+                
+              <h2 class="trigger kurz_hd"><?php echo $nadpis?>  <i class="fas "></i></h2>
+              <p class="toggle p_hd"><?php echo $content?></a></p>
+
+            <?php 
+            } 
+              mysqli_free_result($result);
+              mysqli_close($conn);
+            ?> 
 
     </div>
     <script>

@@ -126,6 +126,38 @@
     }
 
 
+    //doucovanie
+
+    if(isset($_POST['buts1'])) {
+
+        define('DB_SERVER', 'mysql80.websupport.sk:3314');
+        define('DB_USERNAME', 'l2mlyiv5');
+        define('DB_PASSWORD', 'Nn4&,~TpYt');
+        define('DB_NAME', 'l2mlyiv5');
+
+        // pokusenie sa spojit s mysql DB
+
+        $conn = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
+
+        // kontrola pripojenia
+
+        if($conn->connect_error) {
+            die('ERROR: Nieje mozne sa spojit s DB'.  $conn->connect_error);
+        }
+
+        $sql = "INSERT INTO tabory (nadpis, content)
+            VALUES ('". $_POST['haha1']."','". $_POST['editor']."')";
+
+            
+            if (mysqli_query($conn, $sql)) {
+                echo "kurz naplneny";
+            }else {
+                echo "Error" . $sql . "" . mysqli_error($conn);
+            }
+            $conn->close();
+    }
+
+
 
 
 ?>
@@ -215,6 +247,28 @@
   </div>
 </div>
     <input type="submit" name="buts" value="pridaj" class="btn btn-primary">
+</form>
+
+<br><br><br><br><br><br><br>
+
+
+<h3>Oslavy a denné tábory</h3>
+
+
+<form action="#" method="POST">
+    <div class="form-group">
+        <label for="time">Nadpis</label>
+        <input type="text" class="form-control" name="haha1" id="time" placeholder="zadajte nadpis" required>
+    </div>
+    
+    <!-- Textarea -->
+<div class="form-group">
+<label class="col-md-8 control-label" for="text">Text</label> 
+<div class="col-md-8">
+  <textarea name="editor" id="editor" rows="10" cols="100"></textarea>
+  </div>
+</div>
+    <input type="submit" name="buts1" value="pridaj" class="btn btn-primary">
 </form>
 
 

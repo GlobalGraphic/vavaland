@@ -45,7 +45,7 @@
               <a class="nav-link" href="rozvrh.html">Rozvrh</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="oslavy.html">Oslavy a tábory</a>
+              <a class="nav-link" href="oslavy.php">Oslavy a tábory</a>
             </li>
             <li class="nav-item" id="fero">
               <a class="nav-link" href="hala_miestnosti.html">Miestnosti</a>
