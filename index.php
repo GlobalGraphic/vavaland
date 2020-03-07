@@ -53,8 +53,8 @@ if(isset($_POST['news_btn'])){
     <script>
 
 function popup() {
-        var modal = document.getElementById("myModal");
-                          modal.style.display = "block";
+        var modal = document.getElementById("myModal2");
+        modal.style.display = "block";
 
         // Get the <span> element that closes the modal
         var span = document.getElementsByClassName("close")[0];
@@ -72,7 +72,7 @@ function popup() {
 </script>
 <style>
 /* The Modal (background) */
-.modal {
+#myModal2  {
         display: none; /* Hidden by default */
         position: fixed; /* Stay in place */
         z-index: 1; /* Sit on top */
@@ -87,7 +87,7 @@ function popup() {
       }
       
       /* Modal Content */
-      .modal-content {
+      #modal-content2 {
         position: relative;
         background-color: #fefefe;
         margin: auto;
@@ -130,15 +130,15 @@ function popup() {
         cursor: pointer;
       }
       
-      .modal-header {
+      #modal-header2 {
         padding: 2px 16px;
         background-color: #64CC27;;
         color: white;
       }
       
-      .modal-body {padding: 2px 16px;}
+      #modal-body2 {padding: 2px 16px;}
       
-      .modal-footer {
+      #modal-footer2 {
         padding: 2px 16px;
         background-color: #64CC27;;
         color: white;
@@ -191,19 +191,19 @@ function popup() {
         </div>
       </nav><br><br><br><br>
          <!-- The Modal -->
-   <div id="myModal" class="modal">
+   <div id="myModal2" class="modal">
 
 <!-- Modal content -->
-<div class="modal-content">
-  <div class="modal-header">
+<div class="modal-content" id="modal-content2">
+  <div class="modal-header" id="modal-header2">
     <span class="close">&times;</span>
   </div>
-  <div class="modal-body">
+  <div class="modal-body" id="modal-body2">
     <h2 class="center">Týždeň cvičenia zdarma !!!</h2>
     <a class="text-center" href="src/rozvrh.html">Rozvrh aktuálnych cvičení nájdeš tu</a>
     <p class="center">Ďakujeme<br>Tím Vavaland</p>
   </div>
-  <div class="modal-footer">
+  <div class="modal-footer" id="modal-footer2">
   </div>
 </div>
    </div>
@@ -306,17 +306,103 @@ function popup() {
 
         <div class="col-lg-4">
           <img src="assets/kids-2580991_1920.jpg" class="d-block w-100" alt="https://www.vavaland.sk/">
-          <a href="#" class="ahref"><div class="bottom-left">Pohybová príprava JUNIOR a TEEN</div></a>
+          <a href="#" class="ahref" data-toggle="modal" data-target="#myModal1"><div class="bottom-left">Pohybová príprava JUNIOR a TEEN</div></a>
+          <div class="modal fade" id="myModal1">
+    				<div class="modal-dialog">
+      					<div class="modal-content">
+       					 <div class="modal-header">
+         				 <h4 class="modal-title one">Pohybová príprava JUNIOR a TEEN</h4>
+                         <button type="button" class="close" data-dismiss="modal">&times;</button>
+                         </div>
+        				<div class="modal-body">
+        						<p>Kedy:	UT: 17:00 - 18:00<br>
+                      ŠT:&nbsp;&nbsp;  17:00 - 18:00<br>
+                      Vek:&nbsp;&nbsp;  8 - 12 rokov<br>
+                      Frekvencia tréningov:&nbsp;&nbsp;	2x/týždeň<br>
+                      Trvanie kurzu:&nbsp;&nbsp; 02.4.2020 - 30.6.2020 <br>
+                      Počet tréningov:&nbsp;&nbsp;	25<br>
+                      Cena:&nbsp;&nbsp;	150€/kurz<br>
+                      Počet miest:&nbsp;&nbsp; 	15 <br>
+                    </p>
+        				</div>
+        				<div class="modal-footer">
+          					<button type="button" class="btn btn-danger" data-dismiss="modal">Zatvoriť</button>
+        				</div>
+      					</div>
+    				</div>
+ 				 </div>
         </div>
 
         <div class="col-lg-4">
           <img src="assets/ballet-1030921_1920.jpg" class="d-block w-100" alt="https://www.vavaland.sk/">
-          <a href="#" class="ahref"><div class="bottom-left">Parkour KIDS a BASIC</div></a>
+          <a href="#" class="ahref" data-toggle="modal" data-target="#myModal3"><div class="bottom-left">Parkour KIDS a BASIC</div></a>
+          <div class="modal fade" id="myModal3">
+    				<div class="modal-dialog">
+      					<div class="modal-content">
+       					 <div class="modal-header">
+         				 <h4 class="modal-title">Parkour KIDS a BASIC</h4>
+                         <button type="button" class="close" data-dismiss="modal">&times;</button>
+                         </div>
+        				<div class="modal-body">
+                    <p>Parkour KIDS<br><br>
+
+
+                      Kedy:&nbsp;&nbsp;	PON: 16:00 - 17:00<br>
+                      STR:&nbsp;&nbsp; 16:00 - 17:00<br>
+                      Vek:&nbsp;&nbsp;	6 - 8 rokov<br>
+                      Frekvencia tréningov:&nbsp;&nbsp;	2x/týždeň<br>
+                      Trvanie kurzu:&nbsp;&nbsp;	02.4.2020 - 30.6.2020<br>
+                      Počet tréningov:&nbsp;&nbsp;	25<br>
+                      Cena:&nbsp;&nbsp;	162€/kurz<br>
+                      Počet miest:&nbsp;&nbsp;	15 <br><br><br>
+
+                      Parkour BASIC<br><br>
+
+                      Kedy:&nbsp;&nbsp;	PON: 17:00 - 18:00<br>
+                      STR:&nbsp;&nbsp; 17:00 - 18:00<br>
+                      Vek:&nbsp;&nbsp;	9 - 12 rokov<br>
+                      Frekvencia tréningov:&nbsp;&nbsp;	2x/týždeň<br>
+                      Trvanie kurzu:&nbsp;&nbsp;	02.4.2020 - 30.6.2020<br>
+                      Počet tréningov:&nbsp;&nbsp;	25<br>
+                      Cena:&nbsp;&nbsp;	150€/kurz<br>
+                      Počet miest:&nbsp;&nbsp;	15 <br>
+                    </p>
+        				</div>
+        				<div class="modal-footer">
+          					<button type="button" class="btn btn-danger" data-dismiss="modal">Zatvoriť</button>
+        				</div>
+      					</div>
+    				</div>
+ 				 </div>
         </div>
 
         <div class="col-lg-4">
           <img src="assets/training-828741_1920.jpg" class="d-block w-100" alt="https://www.vavaland.sk/">
-          <a href="#" class="ahref"><div class="bottom-left blue">Sebaobrana TEEN</div></a>
+          <a href="#" class="ahref" data-toggle="modal" data-target="#myModal4"><div class="bottom-left blue">Sebaobrana TEEN</div></a>
+          <div class="modal fade" id="myModal4">
+    				<div class="modal-dialog">
+      					<div class="modal-content">
+       					 <div class="modal-header">
+         				 <h4 class="modal-title one">Sebaobrana TEEN</h4>
+                         <button type="button" class="close" data-dismiss="modal">&times;</button>
+                         </div>
+        				<div class="modal-body">
+        						<p>Kedy:&nbsp;&nbsp;	UT: 16:00 - 17:00<br>
+                      ŠT:&nbsp;&nbsp; 16:00 - 17:00<br>
+                      Vek:&nbsp;&nbsp;	10 - 14 rokov<br>
+                      Frekvencia tréningov:&nbsp;&nbsp;	1x/týždeň<br>
+                      Trvanie kurzu:&nbsp;&nbsp;	23.3.2020 - 27.4.2020<br>
+                      Počet tréningov:&nbsp;&nbsp;	6<br>
+                      Cena:&nbsp;&nbsp;	48€/kurz<br>
+                      Počet miest:&nbsp;&nbsp;	12 <br>
+                    </p>
+        				</div>
+        				<div class="modal-footer">
+          					<button type="button" class="btn btn-danger" data-dismiss="modal">Zatvoriť</button>
+        				</div>
+      					</div>
+    				</div>
+ 				 </div>
         </div>
 
       </div>
@@ -328,17 +414,104 @@ function popup() {
 
         <div class="col-lg-4">
           <img src="assets/ballet-1030921_1920.jpg" class="d-block w-100" alt="https://www.vavaland.sk/">
-          <a href="#" class="ahref"><div class="bottom-left">Kurzy pre deti pod dohľadom fyzioterapeuta</div></a>
+          <a href="#" class="ahref" data-toggle="modal" data-target="#myModal5"><div class="bottom-left">Kurzy pre deti pod dohľadom fyzioterapeuta</div></a>
+          <div class="modal fade" id="myModal5">
+    				<div class="modal-dialog">
+      					<div class="modal-content">
+       					 <div class="modal-header">
+         				 <h4 class="modal-title one">Kurzy pre deti pod dohľadom fyzioterapeuta</h4>
+                         <button type="button" class="close" data-dismiss="modal">&times;</button>
+                         </div>
+        				<div class="modal-body">
+        						<p>Zdravé nôžky<br><br>
+Kedy:&nbsp;&nbsp;	STR: 16:00 - 17:00<br>
+
+Vek:&nbsp;&nbsp;	3 - 6 rokov<br>
+Frekvencia tréningov:&nbsp;&nbsp;	1x/týždeň<br>
+Trvanie kurzu:&nbsp;&nbsp;	01.4.2020 - 06.5.2020<br>
+Počet tréningov:&nbsp;&nbsp;	6<br>
+Cena:&nbsp;&nbsp;	48€/kurz<br>
+Počet miest:&nbsp;&nbsp;	12 <br><br><br>
+
+Zdravý chrbát<br><br>
+Kedy:&nbsp;&nbsp;	STR: 17:00 - 18:00<br>
+
+Vek:&nbsp;&nbsp;	6 - 14 rokov<br>
+Frekvencia tréningov:&nbsp;&nbsp;	1x/týždeň<br>
+Trvanie kurzu:&nbsp;&nbsp;	01.4.2020 - 06.5.2020<br>
+Počet tréningov:&nbsp;&nbsp;	6<br>
+Cena:&nbsp;&nbsp;	48€/kurz<br>
+Počet miest:&nbsp;&nbsp;	12 <br>
+
+                    </p>
+        				</div>
+        				<div class="modal-footer">
+          					<button type="button" class="btn btn-danger" data-dismiss="modal">Zatvoriť</button>
+        				</div>
+      					</div>
+    				</div>
+ 				 </div>
         </div>
 
         <div class="col-lg-4">
           <img src="assets/training-828741_1920.jpg" class="d-block w-100" alt="https://www.vavaland.sk/">
-          <a href="#" class="ahref"><div class="bottom-left">BABY English</div></a>
+          <a href="#" class="ahref" data-toggle="modal" data-target="#myModal6"><div class="bottom-left">BABY English</div></a>
+          <div class="modal fade" id="myModal6">
+    				<div class="modal-dialog">
+      					<div class="modal-content">
+       					 <div class="modal-header">
+         				 <h4 class="modal-title">BABY English</h4>
+                         <button type="button" class="close" data-dismiss="modal">&times;</button>
+                         </div>
+        				<div class="modal-body">
+        						<p>
+                    Kedy:&nbsp;&nbsp;	UT: 09:30 - 10:30<br>
+     ŠT:&nbsp;&nbsp;	09:30 - 10:30<br>
+Vek:&nbsp;&nbsp;	2,5 - 3 roky<br>
+Frekvencia:&nbsp;&nbsp;	2x/týždeň<br>
+Trvanie kurzu:&nbsp;&nbsp;	02.4.2020 - 05.5.2020<br>
+Počet hodín:&nbsp;&nbsp;	10<br>
+Cena:&nbsp;&nbsp;	140€/kurz<br>
+Počet miest:&nbsp;&nbsp;	10 <br>
+
+                    </p>
+        				</div>
+        				<div class="modal-footer">
+          					<button type="button" class="btn btn-danger" data-dismiss="modal">Zatvoriť</button>
+        				</div>
+      					</div>
+    				</div>
+ 				 </div>
         </div>
 
         <div class="col-lg-4">
           <img src="assets/kids-2580991_1920.jpg" class="d-block w-100" alt="https://www.vavaland.sk/">
-          <a href="#" class="ahref"><div class="bottom-left blue">Montessori dielničky</div></a>
+          <a href="#" class="ahref" data-toggle="modal" data-target="#myModal7"><div class="bottom-left blue">Montessori dielničky</div></a>
+          <div class="modal fade" id="myModal7">
+    				<div class="modal-dialog">
+      					<div class="modal-content">
+       					 <div class="modal-header">
+         				 <h4 class="modal-title">Montessori dielničky</h4>
+                         <button type="button" class="close" data-dismiss="modal">&times;</button>
+                         </div>
+        				<div class="modal-body">
+        						<p>
+                    Kedy:&nbsp;&nbsp;	UT: 14:30 - 15:30<br>
+ŠT:&nbsp;&nbsp;	09:00 - 10:00<br>
+Vek:&nbsp;&nbsp;	2 - 3 roky<br>
+Frekvencia lekcie:&nbsp;&nbsp;	1x/týždeň<br>
+Trvanie kurzu:&nbsp;&nbsp;	17.3.2020 - 14.4.2020<br>
+Počet lekcií:&nbsp;&nbsp;	5<br>
+Cena:&nbsp;&nbsp;	35€/kurz<br>
+Počet miest:&nbsp;&nbsp;	8<br>
+                    </p>
+        				</div>
+        				<div class="modal-footer">
+          					<button type="button" class="btn btn-danger" data-dismiss="modal">Zatvoriť</button>
+        				</div>
+      					</div>
+    				</div>
+ 				 </div>
         </div>
 
       </div>
@@ -509,10 +682,22 @@ prihlásení v časti Oslavy/Tábory/Miestnosti v ľavom menu vyplniť formulár
     </div>
   </div>
 </div>
-
 </section>
 
-<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script type="text/javascript" id="cookieinfo"
+	src="cookieinfo.min.js"
+	data-bg="#eee"
+	data-fg="#000"
+  data-link="#2E80D1"
+  data-divlinkbg="#2E80D1"
+  data-divlink="#FFF"
+	data-cookie="CookieInfoScript"
+  data-text-align="left"
+  data-message="Tento web používa súbory cookies. Prehliadaním webu vyjadrujete súhlas s ich používaním."
+  data-linkmsg="Viac informácií"
+  data-moreinfo="https://vavaland.sk/VAVAland%20-%20S%C3%BAbory%20Cookie.pdf"
+  data-close-text="V poriadku">
+</script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 </body>
